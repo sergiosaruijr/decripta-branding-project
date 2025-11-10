@@ -1,6 +1,8 @@
 import Image from "next/image";
 
+import Navbar from "@/components/bar/navbar";
 import CardPost from "@/components/common/card-post";
+import FluidGlass from "@/components/FluidGlass";
 
 export default function Home() {
   const projects = [
@@ -57,6 +59,8 @@ export default function Home() {
   return (
     <main>
       <div className="relative h-screen w-full mb-8">
+        {/* <FluidGlass mode="bar" /> */}
+        <Navbar />
         <Image
           src="/image/Outdoor2.png"
           alt="Imagem de fundo"
