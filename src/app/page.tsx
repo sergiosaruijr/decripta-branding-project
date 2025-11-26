@@ -89,11 +89,11 @@ export default function Home() {
         >
           <div className="max-w-7xl w-full grid md:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl">
             {/* Lado esquerdo */}
-            <div className="bg-neutral-900 p-12 flex flex-col justify-center">
-              <p className="text-[#89aa29] text-sm font-bold tracking-wider mb-4">
+            <div className="bg-gray-600 p-12 flex flex-col justify-center">
+              <p className="text-[#89aa29] text-sm font-amifer tracking-wider mb-4">
                 [CONTACT US]
               </p>
-              <h2 className="text-5xl md:text-6xl font-bold text-[#89aa29] mb-12 leading-tight">
+              <h2 className="text-5xl md:text-6xl font-amifer text-[#89aa29] mb-12 leading-tight">
                 CONNECT
                 <br />
                 WITH US
@@ -102,7 +102,7 @@ export default function Home() {
               <div className="space-y-4">
                 <a
                   href="mailto:itconf@gmail.com"
-                  className="block bg-[#89aa29] text-white px-8 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-opacity text-center"
+                  className="block bg-[#89aa29] text-white px-8 py-4 rounded-full text-lg font-amifer hover:opacity-90 transition-opacity text-center"
                 >
                   ITCONF@GMAIL.COM
                 </a>
@@ -112,15 +112,15 @@ export default function Home() {
                     href="https://twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-[#89aa29] text-neutral-900 px-6 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-opacity text-center"
+                    className="flex-1 bg-[#89aa29] text-neutral-900 px-6 py-4 rounded-full text-lg font-amifer hover:opacity-90 transition-opacity text-center"
                   >
                     TWITTER (X)
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/decripta-branding"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-[#89aa29] text-white px-6 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-opacity text-center"
+                    className="flex-1 bg-[#89aa29] text-white px-6 py-4 rounded-full text-lg font-amifer hover:opacity-90 transition-opacity text-center"
                   >
                     LINKEDIN
                   </a>
