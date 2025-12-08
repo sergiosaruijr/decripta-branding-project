@@ -82,6 +82,15 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Quem Somos Section */}
+        <section id="quem-somos">
+          <h3>Decripta Branding</h3>
+          <p>
+            Decripta Branding é uma agência de branding e design que cria
+            identidades visuais para empresas e marcas.
+          </p>
+        </section>
+
         {/* Contato Section */}
         <section
           id="contato"
@@ -101,10 +110,10 @@ export default function Home() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:itconf@gmail.com"
+                  href="mailto:decriptabranding@gmail.com"
                   className="block bg-[#89aa29] text-white px-8 py-4 rounded-full text-lg font-amifer hover:opacity-90 transition-opacity text-center"
                 >
-                  ITCONF@GMAIL.COM
+                  DECRIPTABRANDING@GMAIL.COM
                 </a>
 
                 <div className="flex gap-4">
@@ -112,7 +121,7 @@ export default function Home() {
                     href="https://twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-[#89aa29] text-neutral-900 px-6 py-4 rounded-full text-lg font-amifer hover:opacity-90 transition-opacity text-center"
+                    className="flex-1 bg-[#89aa29] text-white px-6 py-4 rounded-full text-lg font-amifer hover:opacity-90 transition-opacity text-center"
                   >
                     TWITTER (X)
                   </a>
