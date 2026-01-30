@@ -179,7 +179,7 @@ export default function Home() {
                 <div>
                   <label
                     htmlFor="tipo"
-                    className="block text-white text-xs font-bold tracking-wider mb-2"
+                    className="block text-black text-xs font-bold tracking-wider mb-2"
                   >
                     INQUIRY TYPE
                   </label>
@@ -188,9 +188,24 @@ export default function Home() {
                     className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-white/30 text-white/50 focus:outline-none focus:border-white transition-colors appearance-none cursor-pointer"
                   >
                     <option value="">Select the topic</option>
-                    <option value="geral">Geral</option>
-                    <option value="projeto">Novo Projeto</option>
-                    <option value="suporte">Suporte</option>
+                    <option
+                      value="geral"
+                      className="bg-contact-blue text-white"
+                    >
+                      Geral
+                    </option>
+                    <option
+                      value="projeto"
+                      className="bg-contact-blue text-white"
+                    >
+                      Novo Projeto
+                    </option>
+                    <option
+                      value="suporte"
+                      className="bg-contact-blue text-white"
+                    >
+                      Suporte
+                    </option>
                   </select>
                 </div>
 
