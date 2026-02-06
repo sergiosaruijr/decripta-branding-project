@@ -1,10 +1,46 @@
+"use client";
+
+// import FluidGlass from "@/components/FluidGlass";
+import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
 import Navbar from "@/components/bar/navbar";
 import CardPost from "@/components/common/card-post";
-// import FluidGlass from "@/components/FluidGlass";
+
+const formSchema = z.object({
+  name: z
+    .string()
+    .min(1, { message: "Nome é obrigatório" })
+    .min(3, { message: "Nome deve ter no mínimo 3 caracteres" }),
+  email: z.string().email({ message: "E-mail inválido" }),
+  inquiryType: z.string().min(1, { message: "Escolha o tipo de assunto" }),
+  message: z
+    .string()
+    .min(1, { message: "Mensagem é obrigatória" })
+    .min(10, { message: "Mensagem deve ter no mínimo 10 caracteres" }),
+});
 
 export default function Home() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      inquiryType: "",
+      message: "",
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values);
+  }
+
   const projects = [
     {
       href: "/cases",
@@ -145,7 +181,7 @@ export default function Home() {
                 GET IN TOUCH!
               </h3>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
                 <div>
                   <label
                     htmlFor="nome"
@@ -158,7 +194,16 @@ export default function Home() {
                     id="nome"
                     className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-neutral-900/30 text-neutral-900 placeholder:text-neutral-900/50 focus:outline-none focus:border-neutral-900 transition-colors"
                     placeholder="William Brown"
+                    {...register("name")}
                   />
+
+                  <p>
+                    {errors.name?.message && (
+                      <p className="text-red-500 text-xs">
+                        {errors.name.message}
+                      </p>
+                    )}
+                  </p>
                 </div>
 
                 <div>
@@ -173,7 +218,16 @@ export default function Home() {
                     id="email"
                     className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-white/30 text-white placeholder:text-white/50 focus:outline-none focus:border-white transition-colors"
                     placeholder="willbrown@gmail.com"
+                    {...register("email")}
                   />
+
+                  <p>
+                    {errors.email?.message && (
+                      <p className="text-red-500 text-xs">
+                        {errors.email.message}
+                      </p>
+                    )}
+                  </p>
                 </div>
 
                 <div>
@@ -186,6 +240,7 @@ export default function Home() {
                   <select
                     id="tipo"
                     className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-white/30 text-white/50 focus:outline-none focus:border-white transition-colors appearance-none cursor-pointer"
+                    {...register("inquiryType")}
                   >
                     <option value="">Select the topic</option>
                     <option
@@ -207,6 +262,14 @@ export default function Home() {
                       Suporte
                     </option>
                   </select>
+
+                  <p>
+                    {errors.inquiryType?.message && (
+                      <p className="text-red-500 text-xs">
+                        {errors.inquiryType.message}
+                      </p>
+                    )}
+                  </p>
                 </div>
 
                 <div>
@@ -221,7 +284,16 @@ export default function Home() {
                     rows={4}
                     className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-white/30 text-white placeholder:text-white/50 focus:outline-none focus:border-white transition-colors resize-none"
                     placeholder="How can we help you?"
+                    {...register("message")}
                   />
+
+                  <p>
+                    {errors.message?.message && (
+                      <p className="text-red-500 text-xs">
+                        {errors.message.message}
+                      </p>
+                    )}
+                  </p>
                 </div>
 
                 <button
