@@ -26,6 +26,7 @@ export default function Home() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,9 +38,24 @@ export default function Home() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        alert("Mensagem enviada com sucesso para a Decripta!");
+        reset();
+      } else {
+        alert("Ops, algo deu errado no envio.");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const projects = [
     {
@@ -197,13 +213,11 @@ export default function Home() {
                     {...register("name")}
                   />
 
-                  <p>
-                    {errors.name?.message && (
-                      <p className="text-red-500 text-xs">
-                        {errors.name.message}
-                      </p>
-                    )}
-                  </p>
+                  {errors.name?.message && (
+                    <p className="text-red-500 text-xs">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -221,13 +235,11 @@ export default function Home() {
                     {...register("email")}
                   />
 
-                  <p>
-                    {errors.email?.message && (
-                      <p className="text-red-500 text-xs">
-                        {errors.email.message}
-                      </p>
-                    )}
-                  </p>
+                  {errors.name?.message && (
+                    <p className="text-red-500 text-xs">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -263,13 +275,11 @@ export default function Home() {
                     </option>
                   </select>
 
-                  <p>
-                    {errors.inquiryType?.message && (
-                      <p className="text-red-500 text-xs">
-                        {errors.inquiryType.message}
-                      </p>
-                    )}
-                  </p>
+                  {errors.name?.message && (
+                    <p className="text-red-500 text-xs">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -287,13 +297,11 @@ export default function Home() {
                     {...register("message")}
                   />
 
-                  <p>
-                    {errors.message?.message && (
-                      <p className="text-red-500 text-xs">
-                        {errors.message.message}
-                      </p>
-                    )}
-                  </p>
+                  {errors.name?.message && (
+                    <p className="text-red-500 text-xs">
+                      {errors.name.message}
+                    </p>
+                  )}
                 </div>
 
                 <button
