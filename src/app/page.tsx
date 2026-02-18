@@ -1,6 +1,5 @@
 "use client";
 
-// import FluidGlass from "@/components/FluidGlass";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -115,7 +114,6 @@ export default function Home() {
       <main>
         <section id="inicio">
           <div className="relative h-screen w-full mb-8">
-            {/* <FluidGlass mode="bar" /> */}
             <Navbar />
             <Image
               src="/image/Outdoor2.png"
