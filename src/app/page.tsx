@@ -116,7 +116,7 @@ export default function Home() {
           <div className="relative h-screen w-full mb-8">
             <Navbar />
             <Image
-              src="/image/Outdoor2.png"
+              src="/image/OUTDOOR2.png"
               alt="Imagem de fundo"
               fill
               className="object-cover"

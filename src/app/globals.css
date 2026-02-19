@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Fagun&family=Amifer&family=Hagrid&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Fagun&family=Amifer&family=Hagrid&display=swap"); */
 
 @custom-variant dark (&:is(.dark *));
 
