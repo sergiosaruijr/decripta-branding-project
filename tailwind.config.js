@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      hagrid: ["Hagrid", "sans-serif"],
+      hagrid: ["var(--font-hagrid)", "sans-serif"],
       fagun: ["Fagun", "sans-serif"],
       amifer: ["Amifer", "serif"],
     },

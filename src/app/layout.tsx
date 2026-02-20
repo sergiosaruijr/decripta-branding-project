@@ -2,6 +2,13 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+
+// Configurando a fonte localmente
+const hagrid = localFont({
+  src: "../../public/fonts/Hagrid.woff",
+  variable: "--font-hagrid",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,12 +32,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Importação do Typekit da Adobe */}
-        <link rel="stylesheet" href="https://use.typekit.net/tvr2qab.css" />
-      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${hagrid.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
