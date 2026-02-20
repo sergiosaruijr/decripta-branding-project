@@ -1,28 +1,29 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
 const hagrid = localFont({
-  src: "../../public/fonts/Hagrid.woff",
+  src: "../fonts/HagridTrial-Regular.woff2",
   variable: "--font-hagrid",
+  weight: "100 900",
 });
 
 const fagun = localFont({
-  src: "../../public/fonts/Fagun.woff",
+  src: "../fonts/FagunTrial-Medium.woff2",
   variable: "--font-fagun",
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -36,9 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${hagrid.variable} ${geistSans.variable} ${geistMono.variable} ${fagun.variable} antialiased`}
-      >
+      <body className={`${hagrid.variable} ${fagun.variable} antialiased`}>
         {children}
       </body>
     </html>
