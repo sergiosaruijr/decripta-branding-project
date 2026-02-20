@@ -30,11 +30,11 @@ const CardPost = ({
         />
       </div>
       <div className="space-y-2 rounded-lg p-4 pt-5 transition-colors duration-300 group-hover:bg-[hsla(0,0%,80%,0.5)]">
-        <h1 className="group-hover:text-primary font-hagrid text-gray-700 text-2xl font-bold">
+        <h1 className="group-hover:text-primary font-fagun text-gray-700 text-2xl font-bold">
           {title}
         </h1>
-        <p className="font-amifer text-sm text-gray-600">{description}</p>
-        <time className="font-amifer text-muted-foreground dataTime={date} text-sm">
+        <p className="font-fagun text-sm text-gray-600">{description}</p>
+        <time className="font-fagun text-muted-foreground dataTime={date} text-sm">
           {new Date(date).toLocaleDateString("pt-BR", {
             year: "numeric",
             month: "long",

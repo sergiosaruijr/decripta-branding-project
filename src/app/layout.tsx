@@ -4,10 +4,14 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 
-// Configurando a fonte localmente
 const hagrid = localFont({
   src: "../../public/fonts/Hagrid.woff",
   variable: "--font-hagrid",
+});
+
+const fagun = localFont({
+  src: "../../public/fonts/Fagun.woff",
+  variable: "--font-fagun",
 });
 
 const geistSans = Geist({
@@ -33,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hagrid.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${hagrid.variable} ${geistSans.variable} ${geistMono.variable} ${fagun.variable} antialiased`}
       >
         {children}
       </body>
