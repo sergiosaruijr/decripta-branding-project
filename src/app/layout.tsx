@@ -25,6 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Importação do Typekit da Adobe */}
+        <link rel="stylesheet" href="https://use.typekit.net/tvr2qab.css" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

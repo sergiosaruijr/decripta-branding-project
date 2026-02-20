@@ -67,7 +67,7 @@ export default function Home() {
     },
     {
       href: "/cases+1",
-      imageUrl: "/image/Outdoor2.png",
+      imageUrl: "/image/OUTDOOR2.png",
       title: "Latas de alumínio pelo planeta",
       description:
         "Lorem ipsum dolor sit amet. Et laudantium dolorum id natus doloremque ut voluptates perspiciatis aut repellat voluptatum et illo nisi et blanditiis dolores! Et dolor ducimus a ratione deserunt At voluptatem debitis quo harum earum qui enim fuga aut animi facere qui voluptatem facere?",
