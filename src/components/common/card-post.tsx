@@ -31,7 +31,7 @@ const CardPost = ({
       </div>
       <div className="space-y-2 rounded-lg p-4 pt-5 transition-colors duration-300 group-hover:bg-[hsla(0,0%,80%,0.5)]">
         <h1
-          // style={{ fontFamily: "var(--font-hagrid)" }}
+          style={{ fontFamily: "var(--font-hagrid)" }}
           className="group-hover:text-primary !font-hagrid text-gray-700 text-2xl font-bold"
         >
           {title}
