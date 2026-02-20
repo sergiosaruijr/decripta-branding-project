@@ -30,7 +30,7 @@ const CardPost = ({
         />
       </div>
       <div className="space-y-2 rounded-lg p-4 pt-5 transition-colors duration-300 group-hover:bg-[hsla(0,0%,80%,0.5)]">
-        <h1 className="group-hover:text-primary font-fagun text-gray-700 text-2xl font-bold">
+        <h1 className="group-hover:text-primary font-hagrid text-gray-700 text-2xl font-bold">
           {title}
         </h1>
         <p className="font-fagun text-sm text-gray-600">{description}</p>
