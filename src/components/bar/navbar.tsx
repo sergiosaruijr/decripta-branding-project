@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 
 const navigation = [
-  { name: "Início", href: "#inicio" },
+  { name: "Início1", href: "#inicio1" },
+  { name: "Início2", href: "#inicio2" },
   { name: "Projetos", href: "#projetos" },
   { name: "Quem Somos", href: "#quem-somos" },
   { name: "Contato", href: "#contato" },
@@ -22,7 +23,7 @@ const Navbar = () => {
 
   const scrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     const element = document.querySelector(href);

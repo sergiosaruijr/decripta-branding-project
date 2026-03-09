@@ -112,7 +112,18 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <section id="inicio">
+        <section id="inicio1">
+          <div className="relative h-screen w-full mb-8">
+            <Navbar />
+            <Image
+              src="/image/Cartao.png"
+              alt="Imagem de fundo"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </section>
+        <section id="inicio2">
           <div className="relative h-screen w-full mb-8">
             <Navbar />
             <Image
