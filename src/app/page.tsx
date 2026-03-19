@@ -116,24 +116,48 @@ export default function Home() {
           <div className="relative h-screen w-full mb-8">
             <Navbar />
             <Image
-              src="/image/Cartao.png"
+              src="/image/bg1.png"
               alt="Imagem de fundo"
               fill
               className="object-cover"
             />
+
+            {/* <Image
+              src="/image/logo.png"
+              alt="Logo"
+              width={100}
+              height={100}
+              className="object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            /> */}
+            <Image
+              src="/image/logo.png"
+              alt="Logo"
+              width={469}
+              height={138}
+              className="object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+
+            <div className="h-9 w-full bg-black absolute bottom-0 flex items-center justity-between">
+              <p className="text-white text-sm font-amifer tracking-wider pl-14">
+                decripta.branding@gmail.com
+              </p>
+              <p className="text-white text-sm font-amifer tracking-wider pl-24">
+                +55 43 99999-9999
+              </p>
+            </div>
           </div>
         </section>
-        <section id="inicio2">
+        {/* <section id="inicio2">
           <div className="relative h-screen w-full mb-8">
             <Navbar />
             <Image
-              src="/image/OUTDOOR2.png"
+              src="/image/Layout2.png"
               alt="Imagem de fundo"
               fill
               className="object-cover"
             />
           </div>
-        </section>
+        </section> */}
 
         <section id="projetos">
           <div className="grid grid-cols-1 gap-8 p-2 sm:grid-cols-2 sm:p-6 md:grid-cols-3 xl:grid-cols-4 ">
