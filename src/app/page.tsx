@@ -7,6 +7,7 @@ import * as z from "zod";
 
 import Navbar from "@/components/bar/navbar";
 import CardPost from "@/components/common/card-post";
+import { NavigationMenuHome } from "@/components/bar/navmenu";
 
 const formSchema = z.object({
   name: z
@@ -109,12 +110,16 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-
+      {/* <Navbar /> */}
+      {/* <NavigationMenuHome /> */}
       <main>
         <section id="inicio1">
           <div className="relative h-screen w-full mb-8">
-            <Navbar />
+            {/* <Navbar /> */}
+            <div className="px-10 py-12 bg-blue-600">
+              <NavigationMenuHome />
+            </div>
+
             <Image
               src="/image/bg1.png"
               alt="Imagem de fundo"
@@ -137,11 +142,11 @@ export default function Home() {
               className="object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             />
 
-            <div className="h-9 w-full bg-black absolute bottom-0 flex items-center justity-between">
-              <p className="text-white text-sm font-amifer tracking-wider pl-14">
+            <div className="h-9 w-full bg-white absolute bottom-0 flex items-center justity-between">
+              <p className="text-black text-sm font-amifer tracking-wider pl-14">
                 decripta.branding@gmail.com
               </p>
-              <p className="text-white text-sm font-amifer tracking-wider pl-24">
+              <p className="text-black text-sm font-amifer tracking-wider pl-24">
                 +55 43 99999-9999
               </p>
             </div>
