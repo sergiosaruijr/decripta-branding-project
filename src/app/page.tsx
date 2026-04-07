@@ -5,9 +5,10 @@ import Image from "next/image";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import Navbar from "@/components/bar/navbar";
+// import Navbar from "@/components/bar/navbar";
 import CardPost from "@/components/common/card-post";
-import { NavigationMenuHome } from "@/components/bar/navmenu";
+// import { NavigationMenuHome } from "@/components/bar/navmenu";
+import { NavigationMenuHome2 } from "@/components/bar/navmenu2";
 
 const formSchema = z.object({
   name: z
@@ -110,14 +111,13 @@ export default function Home() {
 
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <NavigationMenuHome /> */}
       <main>
         <section id="inicio1">
           <div className="relative h-screen w-full mb-8">
             {/* <Navbar /> */}
             <div className="px-10 py-12 bg-blue-600">
-              <NavigationMenuHome />
+              {/* <NavigationMenuHome /> */}
+              <NavigationMenuHome2 />
             </div>
 
             <Image
@@ -163,7 +163,7 @@ export default function Home() {
             />
           </div>
         </section> */}
-
+        {/* Projetos */}
         <section id="projetos">
           <div className="grid grid-cols-1 gap-8 p-2 sm:grid-cols-2 sm:p-6 md:grid-cols-3 xl:grid-cols-4 ">
             {projects.map((proj) => (
@@ -172,7 +172,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Quem Somos Section */}
+        {/* Quem Somos */}
         <section id="quem-somos">
           <h3>Decripta Branding</h3>
           <p>
@@ -181,7 +181,7 @@ export default function Home() {
           </p>
         </section>
 
-        {/* Contato Section */}
+        {/* Contato */}
         <section
           id="contato"
           className="min-h-screen flex items-center justify-center bg-background px-6 py-20"
