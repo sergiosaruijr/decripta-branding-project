@@ -77,7 +77,7 @@ export default function Home() {
     },
     {
       href: "/cases+2",
-      imageUrl: "/image/Flyer.png",
+      imageUrl: "/image/FLYER.png",
       title: "Latas de alumínio pelo planeta",
       description:
         "Lorem ipsum dolor sit amet. Et laudantium dolorum id natus doloremque ut voluptates perspiciatis aut repellat voluptatum et illo nisi et blanditiis dolores! Et dolor ducimus a ratione deserunt At voluptatem debitis quo harum earum qui enim fuga aut animi facere qui voluptatem facere?",
@@ -93,7 +93,7 @@ export default function Home() {
     },
     {
       href: "/cases+4",
-      imageUrl: "/image/Flyer.png",
+      imageUrl: "/image/FLYER.png",
       title: "Latas de alumínio pelo planeta",
       description:
         "Lorem ipsum dolor sit amet. Et laudantium dolorum id natus doloremque ut voluptates perspiciatis aut repellat voluptatum et illo nisi et blanditiis dolores! Et dolor ducimus a ratione deserunt At voluptatem debitis quo harum earum qui enim fuga aut animi facere qui voluptatem facere?",
