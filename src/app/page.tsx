@@ -115,7 +115,7 @@ export default function Home() {
         <section id="inicio1">
           <div className="relative h-screen w-full mb-8">
             {/* <Navbar /> */}
-            <div className="px-10 py-12 bg-blue-600">
+            <div className="px-10 py-12">
               {/* <NavigationMenuHome /> */}
               <NavigationMenuHome2 />
             </div>
