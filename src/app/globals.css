@@ -76,6 +76,10 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-manrope: "Manrope Variable", sans-serif;
+  --font-space: "Space Grotesk Variable", sans-serif;
+  --font-hagrid: var(--font-hagrid);
+  --font-fagun: var(--font-fagun);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -120,7 +124,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "fagun", sans-serif;
+    /* font-family: "fagun", sans-serif; */
   }
   html {
     scroll-behavior: smooth;

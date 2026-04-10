@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { href: "#projetos", title: "Projetos" },
   { href: "#quem-somos", title: "Quem somos" },
   { href: "#contato", title: "Contato" },
+  { href: "#contato2", title: "Contato2" },
 ];
 
 // trocar pelos mockups apos pronto

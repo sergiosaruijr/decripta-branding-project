@@ -2,6 +2,8 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
+import "@fontsource-variable/manrope/wght.css";
+import "@fontsource-variable/space-grotesk/wght.css";
 import localFont from "next/font/local";
 
 const hagrid = localFont({

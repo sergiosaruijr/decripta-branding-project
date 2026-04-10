@@ -11,9 +11,10 @@ module.exports = {
         hagrid: ["var(--font-hagrid)", "sans-serif"],
         fagun: ["var(--font-fagun)", "sans-serif"],
         amifer: ["Amifer", "serif"],
+        manrope: ["Manrope Variable", "sans-serif"],
+        space: ["Space Grotesk Variable", "sans-serif"],
       },
     },
-
     screens: {
       sm: "576px",
       md: "992px",
