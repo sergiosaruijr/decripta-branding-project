@@ -167,7 +167,7 @@ export default function Home() {
     <>
       <main>
         <section id="inicio1">
-          <div className="relative h-screen w-full mb-8">
+          <div className="relative h-screen w-full mb-30">
             {/* <Navbar /> */}
             <div className="px-10 py-12">
               {/* <NavigationMenuHome /> */}
@@ -225,17 +225,19 @@ export default function Home() {
             ))}
           </div>
         </section> */}
-
-        {/* Quem Somos */}
-        {/* Voltar apos arrumar contato */}
-        <section id="quem-somos" className="max-w-7xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
-            {aboutCards.map((proj) => (
-              <AboutCard key={proj.href} {...proj} />
-            ))}
-          </div>
-        </section>
-        {/* <section
+        <div className="max-w-[1900px] mx-auto w-full px-6 space-y-20">
+          {/* Quem Somos */}
+          {/* Voltar apos arrumar contato */}
+          <section id="quem-somos" className="max-w-ful mx-auto px-4 py-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center xl:gap-20">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-38 w-full"> */}
+              {/* caso prefica partindo do mesmo ponto, mas com espaçamento maior */}
+              {aboutCards.map((proj) => (
+                <AboutCard key={proj.href} {...proj} />
+              ))}
+            </div>
+          </section>
+          {/* <section
           id="quem-somos"
           className="min-h-screen flex items-center justify-center bg-background px-6 py-20"
         >
@@ -246,192 +248,192 @@ export default function Home() {
           </p>
         </section> */}
 
-        {/* Contato 2 teste*/}
-        <section
-          id="contato2"
-          className="min-h-screen flex items-center justify-center bg-background px-8 py-20"
-        >
-          <div className="max-w-8xl w-full grid md:grid-cols-2 gap-32 overflow-hidden">
-            {/* Lado esquerdo */}
-            <div className=" flex flex-col  max-w-4xl w-full">
-              <p className="text-[#131313] text-sm font-manrope font-semibold tracking-[0.2em] mb-5.5">
-                INÍCIO DE PROJETO
-              </p>
-              <h2 className="text-5xl md:text-6xl font-space font-bold text-[#131313] mb-10 w-fit pr-10">
-                VAMOS
-                <br />
-                DECODIFICAR
-                <br />
-                SUA MARCA.
-              </h2>
-              <h4 className="text-lg max-w-[450px] font-manrope">
-                Se você busca clareza estratégica, posicionamento sólido e
-                construção de valor de longo prazo, estamos prontos para iniciar
-                a conversa.
-                {/* <br /> */}
-              </h4>
+          {/* Contato 2 teste*/}
+          <section
+            id="contato2"
+            className="min-h-screen flex items-center justify-center bg-background px-8 py-20"
+          >
+            <div className="max-w-8xl w-full grid md:grid-cols-2 gap-32 overflow-hidden">
+              {/* Lado esquerdo */}
+              <div className=" flex flex-col  max-w-4xl w-full">
+                <p className="text-[#131313] text-sm font-manrope font-semibold tracking-[0.2em] mb-5.5">
+                  INÍCIO DE PROJETO
+                </p>
+                <h2 className="text-5xl md:text-6xl font-space font-bold text-[#131313] mb-10 w-fit pr-10">
+                  VAMOS
+                  <br />
+                  DECODIFICAR
+                  <br />
+                  SUA MARCA.
+                </h2>
+                <h4 className="text-lg max-w-[450px] font-manrope">
+                  Se você busca clareza estratégica, posicionamento sólido e
+                  construção de valor de longo prazo, estamos prontos para
+                  iniciar a conversa.
+                  {/* <br /> */}
+                </h4>
 
-              <div className="border-t border-[#131313] max-w-[450px] my-12"></div>
+                <div className="border-t border-[#131313] max-w-[450px] my-12"></div>
 
-              <div className="space-y-4 max-w-[450px] ">
-                <a
-                  href="mailto:decriptabranding@gmail.com"
-                  className="text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity text-center w-fit flex gap-5"
-                >
-                  <Mail size={20} /> DECRIPTABRANDING@GMAIL.COM
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex  text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity text-center w-fit gap-5"
-                >
-                  <SiX size={20} /> TWITTER (X)
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/decripta-branding"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex  text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#c8f135] transition-opacity text-center w-fit gap-5"
-                >
-                  <FaLinkedin size={20} /> LINKEDIN
-                </a>
+                <div className="space-y-4 max-w-[450px] ">
+                  <a
+                    href="mailto:decriptabranding@gmail.com"
+                    className="text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity text-center w-fit flex gap-5"
+                  >
+                    <Mail size={20} /> DECRIPTABRANDING@GMAIL.COM
+                  </a>
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex  text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity text-center w-fit gap-5"
+                  >
+                    <SiX size={20} /> TWITTER (X)
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/decripta-branding"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex  text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#c8f135] transition-opacity text-center w-fit gap-5"
+                  >
+                    <FaLinkedin size={20} /> LINKEDIN
+                  </a>
+                </div>
               </div>
-            </div>
 
-            {/* Lado direito */}
-            <div className="bg-[#131313] p-12 flex flex-col justify-center rounded-sm">
-              {/* <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 leading-tight">
+              {/* Lado direito */}
+              <div className="bg-[#131313] p-12 flex flex-col justify-center rounded-sm">
+                {/* <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 leading-tight">
                 HAVE QUESTIONS?
                 <br />
                 GET IN TOUCH!
               </h3> */}
 
-              <form className="space-y-12 " onSubmit={handleSubmit(onSubmit)}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="nome"
-                      className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase font-manrope"
-                    >
-                      NOME COMPLETO
-                    </label>
-                    <input
-                      type="text"
-                      id="nome"
-                      className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
-                      placeholder="Como devemos te chamar?"
-                      {...register("name")}
-                    />
+                <form className="space-y-12 " onSubmit={handleSubmit(onSubmit)}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+                    <div className="flex flex-col">
+                      <label
+                        htmlFor="nome"
+                        className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase font-manrope"
+                      >
+                        NOME COMPLETO
+                      </label>
+                      <input
+                        type="text"
+                        id="nome"
+                        className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                        placeholder="Como devemos te chamar?"
+                        {...register("name")}
+                      />
 
-                    {errors.name?.message && (
-                      <p className="text-red-500 text-xs">
-                        {errors.name.message}
-                      </p>
-                    )}
-                  </div>
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="email"
-                      className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
-                    >
-                      EMAIL
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
-                      placeholder="seuemail@email.com"
-                      {...register("email")}
-                    />
+                      {errors.name?.message && (
+                        <p className="text-red-500 text-xs">
+                          {errors.name.message}
+                        </p>
+                      )}
+                    </div>
+                    <div className="flex flex-col">
+                      <label
+                        htmlFor="email"
+                        className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
+                      >
+                        EMAIL
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                        placeholder="seuemail@email.com"
+                        {...register("email")}
+                      />
 
-                    {errors.name?.message && (
-                      <p className="text-red-500 text-xs">
-                        {errors.name.message}
-                      </p>
-                    )}
-                  </div>
-                  {/* teste empresa e  cargo */}
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="nome"
-                      className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase font-manrope"
-                    >
-                      EMPRESA
-                    </label>
-                    <input
-                      type="text"
-                      id="nome"
-                      className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
-                      placeholder="Nome da sua organizacao"
-                      {...register("name")}
-                    />
+                      {errors.name?.message && (
+                        <p className="text-red-500 text-xs">
+                          {errors.name.message}
+                        </p>
+                      )}
+                    </div>
+                    {/* teste empresa e  cargo */}
+                    <div className="flex flex-col">
+                      <label
+                        htmlFor="nome"
+                        className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase font-manrope"
+                      >
+                        EMPRESA
+                      </label>
+                      <input
+                        type="text"
+                        id="nome"
+                        className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                        placeholder="Nome da sua organizacao"
+                        {...register("name")}
+                      />
 
-                    {errors.name?.message && (
-                      <p className="text-red-500 text-xs">
-                        {errors.name.message}
-                      </p>
-                    )}
-                  </div>
-                  <div className="flex flex-col">
-                    <label
-                      htmlFor="email"
-                      className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
-                    >
-                      CARGO
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
-                      placeholder="Ex: Diretor de Marketing"
-                      {...register("email")}
-                    />
+                      {errors.name?.message && (
+                        <p className="text-red-500 text-xs">
+                          {errors.name.message}
+                        </p>
+                      )}
+                    </div>
+                    <div className="flex flex-col">
+                      <label
+                        htmlFor="email"
+                        className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
+                      >
+                        CARGO
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                        placeholder="Ex: Diretor de Marketing"
+                        {...register("email")}
+                      />
 
-                    {errors.name?.message && (
-                      <p className="text-red-500 text-xs">
-                        {errors.name.message}
-                      </p>
-                    )}
+                      {errors.name?.message && (
+                        <p className="text-red-500 text-xs">
+                          {errors.name.message}
+                        </p>
+                      )}
+                    </div>
+                    {/* teste Tipo projeto e Estagio marca */}
+                    {/* TIPO DE PROJETO (Select) */}
+                    <div className="flex flex-col relative font-manrope">
+                      <CustomSelect
+                        label="TIPO DE PROJETO"
+                        placeholder="Selecione uma opção"
+                        options={[
+                          { label: "Geral", value: "geral" },
+                          { label: "Novo Projeto", value: "projeto" },
+                        ]}
+                        onChange={(val) => setValue("inquiryType", val)}
+                      />
+                    </div>
+                    <div className="flex flex-col relative font-manrope">
+                      <CustomSelect
+                        label="ESTÁGIO DA MARCA"
+                        placeholder="Selecione o momento atual"
+                        options={[
+                          { label: "Teste1", value: "teste1" },
+                          { label: "Teste2", value: "teste2" },
+                        ]}
+                        onChange={(val) => setValue("inquiryType", val)}
+                      />
+                    </div>
                   </div>
-                  {/* teste Tipo projeto e Estagio marca */}
-                  {/* TIPO DE PROJETO (Select) */}
                   <div className="flex flex-col relative font-manrope">
                     <CustomSelect
-                      label="TIPO DE PROJETO"
-                      placeholder="Selecione uma opção"
+                      label="INVESTIMENTO ESTIMADO"
+                      placeholder="Qual a faixa de investimento?"
                       options={[
-                        { label: "Geral", value: "geral" },
-                        { label: "Novo Projeto", value: "projeto" },
-                      ]}
-                      onChange={(val) => setValue("inquiryType", val)}
-                    />
-                  </div>
-                  <div className="flex flex-col relative font-manrope">
-                    <CustomSelect
-                      label="ESTÁGIO DA MARCA"
-                      placeholder="Selecione o momento atual"
-                      options={[
-                        { label: "Teste1", value: "teste1" },
+                        { label: "Teste1", value: "teste1 " },
                         { label: "Teste2", value: "teste2" },
                       ]}
                       onChange={(val) => setValue("inquiryType", val)}
                     />
                   </div>
-                </div>
-                <div className="flex flex-col relative font-manrope">
-                  <CustomSelect
-                    label="INVESTIMENTO ESTIMADO"
-                    placeholder="Qual a faixa de investimento?"
-                    options={[
-                      { label: "Teste1", value: "teste1 " },
-                      { label: "Teste2", value: "teste2" },
-                    ]}
-                    onChange={(val) => setValue("inquiryType", val)}
-                  />
-                </div>
 
-                {/* <div>
+                  {/* <div>
                   <label
                     htmlFor="tipo"
                     className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
@@ -471,8 +473,8 @@ export default function Home() {
                   )}
                 </div> */}
 
-                {/* Teste investimento */}
-                {/* <div>
+                  {/* Teste investimento */}
+                  {/* <div>
                   <label
                     htmlFor="tipo"
                     className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase font-manrope"
@@ -512,40 +514,42 @@ export default function Home() {
                   )}
                 </div> */}
 
-                <div>
-                  <label
-                    htmlFor="mensagem"
-                    className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
+                  <div>
+                    <label
+                      htmlFor="mensagem"
+                      className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
+                    >
+                      MESSAGE
+                    </label>
+                    <textarea
+                      id="mensagem"
+                      rows={4}
+                      className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-white/30 text-white placeholder:text-white/50 focus:outline-none focus:border-white transition-colors resize-none"
+                      placeholder="How can we help you?"
+                      {...register("message")}
+                    />
+
+                    {errors.name?.message && (
+                      <p className="text-red-500 text-xs">
+                        {errors.name.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-[#C5FE00] border-2 text-[#131313] py-4 rounded-full text-sm font-bold tracking-wider hover:bg-white hover:text-contact-blue transition-all duration-300"
                   >
-                    MESSAGE
-                  </label>
-                  <textarea
-                    id="mensagem"
-                    rows={4}
-                    className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-white/30 text-white placeholder:text-white/50 focus:outline-none focus:border-white transition-colors resize-none"
-                    placeholder="How can we help you?"
-                    {...register("message")}
-                  />
-
-                  {errors.name?.message && (
-                    <p className="text-red-500 text-xs">
-                      {errors.name.message}
-                    </p>
-                  )}
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#C5FE00] border-2 text-[#131313] py-4 rounded-full text-sm font-bold tracking-wider hover:bg-white hover:text-contact-blue transition-all duration-300"
-                >
-                  SEND A MESSAGE
-                </button>
-              </form>
+                    SEND A MESSAGE
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         {/* Contato */}
+
         <section
           id="contato"
           className="min-h-screen flex items-center justify-center bg-background px-6 py-20"
