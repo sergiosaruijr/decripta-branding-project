@@ -167,8 +167,8 @@ export default function Home() {
 
   return (
     <>
-      <main>
-        <section id="inicio1">
+      <main className="scroll-smooth">
+        <section id="inicio">
           <div className="relative h-screen w-full mb-30">
             {/* <Navbar /> */}
             <div className="px-10 py-12">{/* <NavigationMenuHome /> */}</div>
@@ -209,65 +209,21 @@ export default function Home() {
               height={138}
               className="object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 "
             />
-
-            {/* <div className="h-9 w-full bg-white absolute bottom-0 flex items-center justity-between">
-              <p className="text-black text-sm font-amifer tracking-wider pl-14">
-                decripta.branding@gmail.com
-              </p>
-              <p className="text-black text-sm font-amifer tracking-wider pl-24">
-                +55 43 99999-9999
-              </p>
-            </div> */}
           </div>
         </section>
-        {/* <section id="inicio2">
-          <div className="relative h-screen w-full mb-8">
-            <Navbar />
-            <Image
-              src="/image/Layout2.png"
-              alt="Imagem de fundo"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </section> */}
-        {/* Projetos */}
-        {/* <section id="projetos">
-          <div className="grid grid-cols-1 gap-8 p-2 sm:grid-cols-2 sm:p-6 md:grid-cols-3 xl:grid-cols-4 ">
-            {projects.map((proj) => (
-              <CardPost key={proj.href} {...proj} />
-            ))}
-          </div>
-        </section> */}
+
         <div className="max-w-[1900px] mx-auto w-full px-6 space-y-20">
-          {/* Quem Somos */}
-          {/* Voltar apos arrumar contato */}
           <section id="quem-somos" className="max-w-ful mx-auto px-4 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center xl:gap-20">
-              {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-38 w-full"> */}
-              {/* caso prefica partindo do mesmo ponto, mas com espaçamento maior */}
               {aboutCards.map((proj) => (
                 <AboutCard key={proj.href} {...proj} />
               ))}
             </div>
           </section>
-          {/* <section
-          id="quem-somos"
-          className="min-h-screen flex items-center justify-center bg-background px-6 py-20"
-        >
-          <h3>Decripta Branding</h3>
-          <p>
-            Decripta Branding é uma agência de branding e design que cria
-            identidades visuais para empresas e marcas.
-          </p>
-        </section> */}
-
-          {/* Contato 2 teste*/}
-          <FormDecripta />
+          <div id="contato">
+            <FormDecripta />
+          </div>
         </div>
-
-        {/* Contato */}
-        {/* <FormTest /> */}
 
         <footer>
           <div className="w-full h-[260px] bg-black flex justify-between items-center">
@@ -281,22 +237,34 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-2 mr-12 uppercase gap-x-15 gap-y-5 font-bold text-[12px] !font-hagrid">
-              <a href="" className="text-[#C5FE00] hover:text-[#ADAAAA]">
+              <a href="/legal" className="text-[#C5FE00] hover:text-[#ADAAAA]">
                 Legal
               </a>
-              <a href="" className="text-[#C5FE00] hover:text-[#ADAAAA]">
+              <a href="/social" className="text-[#C5FE00] hover:text-[#ADAAAA]">
                 Social
               </a>
-              <a href="" className="text-[#ADAAAA] hover:text-[#C5FE00]">
+              <a
+                href="/privacyPolicy"
+                className="text-[#ADAAAA] hover:text-[#C5FE00]"
+              >
                 Privacy Policy
               </a>
-              <a href="" className="text-[#ADAAAA] hover:text-[#C5FE00] ">
+              <a
+                href="/linkedln"
+                className="text-[#ADAAAA] hover:text-[#C5FE00] "
+              >
                 Linkedln
               </a>
-              <a href="" className="text-[#ADAAAA] hover:text-[#C5FE00]">
+              <a
+                href="/termsOfService"
+                className="text-[#ADAAAA] hover:text-[#C5FE00]"
+              >
                 Terms of service
               </a>
-              <a href="" className="text-[#ADAAAA] hover:text-[#C5FE00]">
+              <a
+                href="/instagram"
+                className="text-[#ADAAAA] hover:text-[#C5FE00]"
+              >
                 Instagram
               </a>
             </div>

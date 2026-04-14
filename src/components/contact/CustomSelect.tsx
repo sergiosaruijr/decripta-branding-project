@@ -42,7 +42,7 @@ export function CustomSelect({
       </div>
 
       {isOpen && (
-        <ul className="absolute z-50 w-full top-full bg-[#131313] border border-white/10 mt-1 py-2 shadow-2xl">
+        <ul className="absolute z-50 w-full top-full bg-[#131313] border border-white/10 mt-1 py-2 shadow-2xl uppercase font-space text-sm">
           {options.map((opt) => (
             <li
               key={opt.value}

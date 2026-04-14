@@ -9,7 +9,12 @@ import { Mail } from "lucide-react";
 const formSchema = z.object({
   name: z.string().min(1, "Informe o nome"),
   email: z.string().email("E-mail inválido"),
-  inquiryType: z.string().min(1, "Selecione o tipo de contato"),
+  company: z.string().min(1, "Informe o nome da sua organização"),
+  position: z.string().min(1, "Informe o seu cargo"),
+  projectType: z.string().min(1, "Selecione uma opção"),
+  brandStatus: z.string().min(1, "Selecione o momento atual"),
+  estimatedInvestment: z.string().min(1, "Selecione a faixa de investimento"),
+  // inquiryType: z.string().min(1, "Selecione o tipo de contato"),
   message: z.string().min(1, "Informe a mensagem"),
 });
 
@@ -25,7 +30,11 @@ export function FormDecripta() {
     defaultValues: {
       name: "",
       email: "",
-      inquiryType: "",
+      company: "",
+      position: "",
+      projectType: "",
+      brandStatus: "",
+      estimatedInvestment: "",
       message: "",
     },
   });
@@ -35,10 +44,7 @@ export function FormDecripta() {
   };
 
   return (
-    <section
-      id="contato2"
-      className="min-h-screen flex items-center justify-center bg-background px-8 py-20"
-    >
+    <section className="min-h-screen flex items-center justify-center bg-background px-8 py-20">
       <div className="max-w-8xl w-full grid md:grid-cols-2 gap-32 overflow-hidden">
         {/* Lado esquerdo */}
         <div className=" flex flex-col  max-w-4xl w-full">
@@ -89,12 +95,6 @@ export function FormDecripta() {
 
         {/* Lado direito */}
         <div className="bg-[#131313] p-12 flex flex-col justify-center rounded-sm">
-          {/* <h3 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 leading-tight">
-        HAVE QUESTIONS?
-        <br />
-        GET IN TOUCH!
-      </h3> */}
-
           <form className="space-y-12 " onSubmit={handleSubmit(onSubmit)}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
               <div className="flex flex-col">
@@ -131,8 +131,8 @@ export function FormDecripta() {
                   {...register("email")}
                 />
 
-                {errors.name?.message && (
-                  <p className="text-red-500 text-xs">{errors.name.message}</p>
+                {errors.email?.message && (
+                  <p className="text-red-500 text-xs">{errors.email.message}</p>
                 )}
               </div>
               {/* teste empresa e  cargo */}
@@ -145,33 +145,37 @@ export function FormDecripta() {
                 </label>
                 <input
                   type="text"
-                  id="nome"
+                  id="empresa"
                   className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
                   placeholder="Nome da sua organizacao"
-                  {...register("name")}
+                  {...register("company")}
                 />
 
-                {errors.name?.message && (
-                  <p className="text-red-500 text-xs">{errors.name.message}</p>
+                {errors.company?.message && (
+                  <p className="text-red-500 text-xs">
+                    {errors.company.message}
+                  </p>
                 )}
               </div>
               <div className="flex flex-col">
                 <label
-                  htmlFor="email"
-                  className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
+                  htmlFor="cargo"
+                  className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase font-manrope"
                 >
                   CARGO
                 </label>
                 <input
-                  type="email"
-                  id="email"
+                  type="text"
+                  id="cargo"
                   className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
                   placeholder="Ex: Diretor de Marketing"
-                  {...register("email")}
+                  {...register("position")}
                 />
 
-                {errors.name?.message && (
-                  <p className="text-red-500 text-xs">{errors.name.message}</p>
+                {errors.position?.message && (
+                  <p className="text-red-500 text-xs">
+                    {errors.position.message}
+                  </p>
                 )}
               </div>
               {/* teste Tipo projeto e Estagio marca */}
@@ -181,10 +185,17 @@ export function FormDecripta() {
                   label="TIPO DE PROJETO"
                   placeholder="Selecione uma opção"
                   options={[
-                    { label: "Geral", value: "geral" },
-                    { label: "Novo Projeto", value: "projeto" },
+                    { label: "Brand Strategy", value: "brandStrategy" },
+                    {
+                      label: "Experiência da Marca",
+                      value: "experienciaDaMarca",
+                    },
+                    {
+                      label: "Lançamento de Marca",
+                      value: "lancamentoDaMarca",
+                    },
                   ]}
-                  onChange={(val) => setValue("inquiryType", val)}
+                  onChange={(val) => setValue("projectType", val)}
                 />
               </div>
               <div className="flex flex-col relative font-manrope">
@@ -192,10 +203,21 @@ export function FormDecripta() {
                   label="ESTÁGIO DA MARCA"
                   placeholder="Selecione o momento atual"
                   options={[
-                    { label: "Teste1", value: "teste1" },
-                    { label: "Teste2", value: "teste2" },
+                    {
+                      label: "Marca em fase de lançamento",
+                      value: "lancamento",
+                    },
+                    {
+                      label:
+                        "Marca  já consolidada, mas sem estratégia definida",
+                      value: "semEstrategia",
+                    },
+                    {
+                      label: "Marca em processo de reposicionamento",
+                      value: "reposicionamento",
+                    },
                   ]}
-                  onChange={(val) => setValue("inquiryType", val)}
+                  onChange={(val) => setValue("brandStatus", val)}
                 />
               </div>
             </div>
@@ -204,111 +226,31 @@ export function FormDecripta() {
                 label="INVESTIMENTO ESTIMADO"
                 placeholder="Qual a faixa de investimento?"
                 options={[
-                  { label: "Teste1", value: "teste1 " },
-                  { label: "Teste2", value: "teste2" },
+                  { label: "até 3 mil", value: "ate3mil" },
+                  { label: "de 3 mil a 10 mil", value: "entre3a10" },
+                  { label: "de 10 mil a 20 mil", value: "entre10a20" },
                 ]}
-                onChange={(val) => setValue("inquiryType", val)}
+                onChange={(val) => setValue("estimatedInvestment", val)}
               />
             </div>
 
-            {/* <div>
-          <label
-            htmlFor="tipo"
-            className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
-          >
-            INQUIRY TYPE
-          </label>
-          <select
-            id="tipo"
-            className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-white/30 text-white/50 focus:outline-none focus:border-white transition-colors appearance-none cursor-pointer"
-            {...register("inquiryType")}
-          >
-            <option value="">Select the topic</option>
-            <option
-              value="geral"
-              className="bg-contact-blue text-white"
-            >
-              Geral
-            </option>
-            <option
-              value="projeto"
-              className="bg-contact-blue text-white"
-            >
-              Novo Projeto
-            </option>
-            <option
-              value="suporte"
-              className="bg-contact-blue text-white"
-            >
-              Suporte
-            </option>
-          </select>
-
-          {errors.name?.message && (
-            <p className="text-red-500 text-xs">
-              {errors.name.message}
-            </p>
-          )}
-        </div> */}
-
-            {/* Teste investimento */}
-            {/* <div>
-          <label
-            htmlFor="tipo"
-            className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase font-manrope"
-          >
-            INVESTIMENTO ESTIMADO
-          </label>
-          <select
-            id="tipo"
-            className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-white/30 text-white/50 focus:outline-none focus:border-white transition-colors appearance-none cursor-pointer"
-            {...register("inquiryType")}
-          >
-            <option value="">Qual a faixa de investimento?</option>
-            <option
-              value="geral"
-              className="bg-contact-blue text-[#131313]"
-            >
-              Geral
-            </option>
-            <option
-              value="projeto"
-              className="bg-contact-blue text-[#131313]"
-            >
-              Novo Projeto
-            </option>
-            <option
-              value="suporte"
-              className="bg-contact-blue text-[#131313]"
-            >
-              Suporte
-            </option>
-          </select>
-
-          {errors.name?.message && (
-            <p className="text-red-500 text-xs">
-              {errors.name.message}
-            </p>
-          )}
-        </div> */}
-
-            <div>
+            <div className="flex flex-col">
               <label
-                htmlFor="mensagem"
-                className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
+                htmlFor="nome"
+                className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase font-manrope"
               >
-                MESSAGE
+                DESCREVA SEU DESAFIO
               </label>
               <textarea
                 id="mensagem"
                 rows={4}
-                className="w-full px-6 py-4 rounded-xl bg-contact-blue border-2 border-white/30 text-white placeholder:text-white/50 focus:outline-none focus:border-white transition-colors resize-none"
-                placeholder="How can we help you?"
+                className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                placeholder="Conte-nos um pouco sobre o que você deseja alcançar...?"
                 {...register("message")}
               />
 
-              {errors.name?.message && (
-                <p className="text-red-500 text-xs">{errors.name.message}</p>
+              {errors.message?.message && (
+                <p className="text-red-500 text-xs">{errors.message.message}</p>
               )}
             </div>
 

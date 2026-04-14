@@ -6,10 +6,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const NAV_ITEMS = [
-  { href: "#projetos", title: "Projetos" },
+  // { href: "#projetos", title: "Projetos" },
+  { href: "#inicio", title: "Início" },
   { href: "#quem-somos", title: "Quem somos" },
   { href: "#contato", title: "Contato" },
-  { href: "#contato2", title: "Contato2" },
 ];
 
 // trocar pelos mockups apos pronto
@@ -23,40 +23,27 @@ const GRID_IMAGES = [
 ];
 
 function useSmoothScroll() {
-  const router = useRouter();
+  return useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    const href = e.currentTarget.getAttribute("href");
+    if (!href?.startsWith("#")) return;
 
-  return useCallback(
-    (e: React.MouseEvent<HTMLAnchorElement>) => {
-      const href = e.currentTarget.getAttribute("href");
-      if (!href) return;
+    e.preventDefault();
+    e.stopPropagation(); // <- importante
 
-      const hashIndex = href.indexOf("#");
-      if (hashIndex === -1) return;
+    const hash = href.slice(1);
+    const target = document.getElementById(hash);
+    if (!target) return;
 
-      const hash = href.slice(hashIndex + 1);
-      const path = href.slice(0, hashIndex);
-      const currentPath = window.location.pathname;
+    const top = target.getBoundingClientRect().top + window.scrollY;
 
-      if (path && path !== currentPath) {
-        router.push(href);
-        return;
-      }
-
-      e.preventDefault();
-      const target = document.getElementById(hash);
-      if (!target) return;
-
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.pushState(null, "", `#${hash}`);
-    },
-    [router],
-  );
+    window.scrollTo({ top, behavior: "smooth" });
+  }, []);
 }
 
 export function NavigationMenuHome2() {
   const [open, setOpen] = useState(false);
   const [activeHref, setActiveHref] = useState<string | null>(null);
-  const handleScroll = useSmoothScroll();
+  // const handleScroll = useSmoothScroll();
 
   // fechamento verificar
   useEffect(() => {
@@ -73,16 +60,30 @@ export function NavigationMenuHome2() {
     };
   }, [open]);
 
+  const [isNavigating, setIsNavigating] = useState(false);
+
   function handleNavClick(
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string,
   ) {
-    setActiveHref(href);
-    handleScroll(e);
+    e.preventDefault();
+    e.stopPropagation();
+
+    // fecha instantaneamente (sem animação)
+    setIsNavigating(true);
+    setOpen(false);
+
     setTimeout(() => {
-      setOpen(false);
+      setIsNavigating(false);
       setActiveHref(null);
-    }, 300);
+
+      const hash = href.startsWith("#") ? href.slice(1) : href.split("#")[1];
+      const target = document.getElementById(hash);
+      if (!target) return;
+
+      const top = target.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top, behavior: "smooth" });
+    }, 50); // delay mínimo só pra garantir que o overlay sumiu do DOM
   }
 
   return (
@@ -115,8 +116,9 @@ export function NavigationMenuHome2() {
       </button>
 
       <div
-        className={`fixed inset-0 z-50 flex transition-all duration-500
-          ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        className={`fixed inset-0 z-50 flex
+        ${isNavigating ? "" : "transition-all duration-500"}
+        ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
       >
         {/* esquerda */}
         <div
@@ -141,7 +143,7 @@ export function NavigationMenuHome2() {
                   }
                   style={{ transitionDelay: open ? `${i * 60}ms` : "0ms" }}
                 >
-                  <Link
+                  <a
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
                     className={`group relative flex items-center justify-between
@@ -176,17 +178,20 @@ export function NavigationMenuHome2() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
           </nav>
 
           {/* rodapé adicionar mais info ou trocar pelo outro do inicio */}
-          <div className="absolute bottom-8 left-12 right-12">
+          <div className="absolute bottom-8 left-12 right-12 flex">
             <p className="text-[11px] text-white/25 tracking-wide">
               decripta.branding@gmail.com
             </p>
+            {/* <p className="text-white/25 text-sm font-amifer tracking-wider pl-24">
+              +55 43 99999-9999
+            </p> */}
           </div>
         </div>
 
