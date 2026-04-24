@@ -1,17 +1,20 @@
 import { ArrowRight, LampIcon, LayersIcon, TargetIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function DecriptaPageApproach() {
   return (
     <div className="bg-[#00322A] text-[#f5f5f0] min-h-screen font-sans">
       <div className="absolute w-full h-[120px] md:h-[80px] overflow-hidden bg-[#a8e038] flex justify-center">
-        <h1 className="font-space font-bold text-7xl pt-1">D</h1>
-        <h1 className="font-space font-bold text-5xl pt-4">E</h1>
-        <h1 className="font-space font-bold text-4xl pt-5">C</h1>
-        <h1 className="font-space font-bold text-5xl pt-2">R</h1>
-        <h1 className="font-space font-bold text-6xl pt-2">I</h1>
-        <h1 className="font-space font-bold text-4xl pt-5">P</h1>
-        <h1 className="font-space font-bold text-5xl pt-4">T</h1>
-        <h1 className="font-space font-bold text-6xl pt-2">A</h1>
+        <Link href="/">
+          <h1 className="font-space font-bold text-7xl pt-1">D</h1>
+          <h1 className="font-space font-bold text-5xl pt-4">E</h1>
+          <h1 className="font-space font-bold text-4xl pt-5">C</h1>
+          <h1 className="font-space font-bold text-5xl pt-2">R</h1>
+          <h1 className="font-space font-bold text-6xl pt-2">I</h1>
+          <h1 className="font-space font-bold text-4xl pt-5">P</h1>
+          <h1 className="font-space font-bold text-5xl pt-4">T</h1>
+          <h1 className="font-space font-bold text-6xl pt-2">A</h1>
+        </Link>
       </div>
 
       <section className="px-44 pt-45 pb-15">

@@ -3,6 +3,7 @@
 // // }
 
 import Image from "next/image";
+import Link from "next/link";
 
 // import Image from "next/image";
 
@@ -65,14 +66,16 @@ export default function DecriptaPageAbout() {
             className=""
           />
         </div> */}
-        <h1 className="font-space font-bold text-7xl pt-1">D</h1>
-        <h1 className="font-space font-bold text-5xl pt-4">E</h1>
-        <h1 className="font-space font-bold text-4xl pt-5">C</h1>
-        <h1 className="font-space font-bold text-5xl pt-2">R</h1>
-        <h1 className="font-space font-bold text-6xl pt-2">I</h1>
-        <h1 className="font-space font-bold text-4xl pt-5">P</h1>
-        <h1 className="font-space font-bold text-5xl pt-4">T</h1>
-        <h1 className="font-space font-bold text-6xl pt-2">A</h1>
+        <Link href="/">
+          <h1 className="font-space font-bold text-7xl pt-1">D</h1>
+          <h1 className="font-space font-bold text-5xl pt-4">E</h1>
+          <h1 className="font-space font-bold text-4xl pt-5">C</h1>
+          <h1 className="font-space font-bold text-5xl pt-2">R</h1>
+          <h1 className="font-space font-bold text-6xl pt-2">I</h1>
+          <h1 className="font-space font-bold text-4xl pt-5">P</h1>
+          <h1 className="font-space font-bold text-5xl pt-4">T</h1>
+          <h1 className="font-space font-bold text-6xl pt-2">A</h1>
+        </Link>
       </div>
 
       <section className="px-44 pt-45 pb-15">
