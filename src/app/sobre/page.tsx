@@ -48,7 +48,7 @@ import Image from "next/image";
 export default function DecriptaPageAbout() {
   return (
     <div className="bg-[#00322A] text-[#f5f5f0] min-h-screen font-sans">
-      <div className="absolute w-[1600px] h-[120px] md:h-[80px] overflow-hidden bg-[#a8e038] flex justify-center">
+      <div className="absolute w-full h-[120px] md:h-[80px] overflow-hidden bg-[#a8e038] flex justify-center">
         {/* <Image
           alt="Grafismo decorativo"
           src="/image/bgSobre.png"
