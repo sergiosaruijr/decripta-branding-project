@@ -1,71 +1,80 @@
-import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
-export default function DecriptaPageMethodology() {
+export default function DecriptaPageApproach() {
   return (
     <div className="bg-[#00322A] text-[#f5f5f0] min-h-screen font-sans">
-      {/* NAVBAR */}
-      <div className="absolute w-[1600px] h-[120px] md:h-[80px] overflow-hidden bg-[#a8e038] flex justify-center">
-        <h1 className="font-space font-bold text-7xl pt-1">D</h1>
-        <h1 className="font-space font-bold text-5xl pt-4">E</h1>
-        <h1 className="font-space font-bold text-4xl pt-5">C</h1>
-        <h1 className="font-space font-bold text-5xl pt-2">R</h1>
-        <h1 className="font-space font-bold text-6xl pt-2">I</h1>
-        <h1 className="font-space font-bold text-4xl pt-5">P</h1>
-        <h1 className="font-space font-bold text-5xl pt-4">T</h1>
-        <h1 className="font-space font-bold text-6xl pt-2">A</h1>
+      <section className="px-30 pt-36 pb-20">
+        <h1 className="text-5xl font-bold leading-tight max-w-3xl">
+          Um processo claro para <br />
+          <span className="text-[#a8e038]">construir marcas consistentes.</span>
+        </h1>
+        <p className="mt-6 text-[#a0b89a] text-xl leading-relaxed max-w-3xl">
+          Nossa metodologia foi criada para trazer estrutura ao <br />
+          que normalmente é feito no improviso.
+        </p>
+      </section>
+
+      <section className="px-30 pb-30 pt-15">
+        <div className="flex flex-col md:flex-row gap-px">
+          <div className="flex-1  p-10 flex flex-col border-[#A0D81D] border-t-2 border-r-2">
+            <h3 className="text-[#a8e038] text-xl font-semibold mb-4">
+              Decodificação
+            </h3>
+            <p className="text-[#a0b89a] text-sm leading-relaxed">
+              Um mergulho profundo no DNA do negócio. Analisamos mercado,
+              comportamento e discurso para encontrar o núcleo do valor da sua
+              marca.
+            </p>
+          </div>
+
+          <div className="flex-1  p-10 flex flex-col border-[#A0D81D] border-t-2 border-r-2">
+            <h3 className="text-[#a8e038] text-xl font-semibold mb-4">
+              Direção
+            </h3>
+            <p className="text-[#a0b89a] text-sm leading-relaxed">
+              Transformamos dados e descobertas em estrutura real. Definimos o
+              posicionamento, a voz e a ambição competitiva onde sua marca vai
+              dominar.
+            </p>
+          </div>
+
+          <div className="flex-1 p-10 flex flex-col border-[#A0D81D] border-t-2">
+            <h3 className="text-[#a8e038] text-xl font-semibold mb-4">
+              Materialização
+            </h3>
+            <p className="text-[#a0b89a] text-sm leading-relaxed">
+              A estratégia ganha forma. Criamos a identidade visual e os pontos
+              de contato que traduzem a nova inteligência da marca em impacto
+              tangível.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="w-full h-20 bg-[#a8e038] overflow-hidden flex items-center">
+        <p className="text-[#0d2818] text-5xl font-black tracking-tight whitespace-nowrap opacity-20 select-none">
+          DECRIPTA · DECRIPTA · DECRIPTA · DECRIPTA · DECRIPTA · DECRIPTA ·
+          DECRIPTA · DECRIPTA · DECRIPTA · DECRIPTA ·{/* deixar nao clicavel */}
+        </p>
       </div>
 
-      {/* HERO */}
-      <section className="px-44 pt-45 pb-15">
-        {/* <p className="text-[#a8e038] text-xs uppercase tracking-widest mb-6">
-          Estratégia de marca
-        </p> */}
-        <h1 className="text-[75px] leading-tight max-w-4xl font-space mb-10">
-          <span className="block text-[#E2E2E2]">Antes de parecer, </span>
-          <span className="block text-[#E2E2E2]">sua marca precisa</span>
-          <span className="text-[#a8e038] text-[120px] font-bold">
-            fazer sentido.
-          </span>
-        </h1>
-        <p className="mt-6 text-[#C0C8C4] text-3xl leading-relaxed max-w-6xl font-light">
-          Na Decripta, a gente não começa pelo design. Começamos <br />
-          pelo entendimento. Deciframos o DNA estratégico para <br />
-          construir visualidade com propósito.
-        </p>
-      </section>
-
-      {/* PARA QUEM */}
-      <section className="px-44 pb-25">
-        <div className="w-12 h-0.5 bg-[#a8e038] mb-8" />
-        <h1 className="text-[75px] leading-tight max-w-4xl font-space mb-5 font-semibold">
-          {/* mudar para inter a font */}
-          Para quem é a Decripta?
-        </h1>
-        <p className="text-[#C0C8C4] text-4xl leading-relaxed max-w-3xl font-light">
-          Fundadores visionários que sentem que sua marca está além do valor que
-          entregam.
-        </p>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-[#a8e038] px-8 py-40 text-center">
-        <h2 className="text-6xl font-regular text-[#00322A] mb-15">
-          {/* mudar para font inter */}
-          Pronto para decifrar <br />
-          sua marca?
+      <section className="bg-[#a8e038] px-8 py-20 text-center">
+        <h2 className="text-4xl font-space text-[#0d2818] mb-8">
+          Pronto para decifrar o <br />
+          verdadeiro potencial da sua <br />
+          marca?
         </h2>
         <a
           href="#"
-          className="inline-block bg-[#0d2818] text-[#f5f5f0] text-sm font-semibold px-8 py-3 "
+          className="inline-flex items-center gap-2 bg-[#0d2818] text-[#a8e038] text-sm font-semibold px-8 py-3"
         >
-          Iniciar Consultoria Estratégica
+          SOLICITAR DIAGNÓSTICO
+          <ArrowRight size={16} />
         </a>
       </section>
 
-      {/* FOOTER */}
       <footer>
         <div className="w-full h-[220px] bg-black flex justify-between items-center">
-          {/* esquerda */}
           <div className="flex flex-col ml-12">
             <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl">
               DECRIPTA

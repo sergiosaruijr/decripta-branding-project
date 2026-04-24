@@ -48,7 +48,6 @@ import Image from "next/image";
 export default function DecriptaPageAbout() {
   return (
     <div className="bg-[#00322A] text-[#f5f5f0] min-h-screen font-sans">
-      {/* NAVBAR */}
       <div className="absolute w-[1600px] h-[120px] md:h-[80px] overflow-hidden bg-[#a8e038] flex justify-center">
         {/* <Image
           alt="Grafismo decorativo"
@@ -73,7 +72,6 @@ export default function DecriptaPageAbout() {
         <h1 className="font-space font-bold text-4xl">I</h1>
       </div>
 
-      {/* HERO */}
       <section className="px-44 pt-45 pb-15">
         {/* <p className="text-[#a8e038] text-xs uppercase tracking-widest mb-6">
           Estratégia de marca
@@ -91,7 +89,6 @@ export default function DecriptaPageAbout() {
         </p>
       </section>
 
-      {/* PARA QUEM */}
       <section className="px-44 pb-25">
         <div className="w-12 h-0.5 bg-[#a8e038] mb-8" />
         <h1 className="text-[75px] leading-tight max-w-4xl font-space mb-5 font-semibold">
@@ -104,7 +101,6 @@ export default function DecriptaPageAbout() {
         </p>
       </section>
 
-      {/* CTA */}
       <section className="bg-[#a8e038] px-8 py-40 text-center">
         <h2 className="text-6xl font-regular text-[#00322A] mb-15">
           {/* mudar para font inter */}
@@ -119,10 +115,8 @@ export default function DecriptaPageAbout() {
         </a>
       </section>
 
-      {/* FOOTER */}
       <footer>
         <div className="w-full h-[220px] bg-black flex justify-between items-center">
-          {/* esquerda */}
           <div className="flex flex-col ml-12">
             <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl">
               DECRIPTA
