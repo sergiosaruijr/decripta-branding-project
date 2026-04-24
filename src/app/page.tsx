@@ -92,7 +92,7 @@ export default function Home() {
   // retirar datas
   const aboutCards = [
     {
-      href: "/conheca",
+      href: "/sobre",
       imageUrl: "/image/decriptaTexto.png",
       title: "Conheça a Decripta",
       description:
