@@ -3,7 +3,7 @@ import { ArrowRight, LampIcon, LayersIcon, TargetIcon } from "lucide-react";
 export default function DecriptaPageApproach() {
   return (
     <div className="bg-[#00322A] text-[#f5f5f0] min-h-screen font-sans">
-      <div className="absolute w-[1600px] h-[120px] md:h-[80px] overflow-hidden bg-[#a8e038] flex justify-center">
+      <div className="absolute w-full h-[120px] md:h-[80px] overflow-hidden bg-[#a8e038] flex justify-center">
         <h1 className="font-space font-bold text-7xl pt-1">D</h1>
         <h1 className="font-space font-bold text-5xl pt-4">E</h1>
         <h1 className="font-space font-bold text-4xl pt-5">C</h1>

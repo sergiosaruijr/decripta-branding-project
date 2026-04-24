@@ -65,11 +65,14 @@ export default function DecriptaPageAbout() {
             className=""
           />
         </div> */}
-        <h1 className="font-space font-bold text-7xl">D</h1>
-        <h1 className="font-space font-bold text-3xl">E</h1>
-        <h1 className="font-space font-bold text-2xl">C</h1>
-        <h1 className="font-space font-bold text-5xl">R</h1>
-        <h1 className="font-space font-bold text-4xl">I</h1>
+        <h1 className="font-space font-bold text-7xl pt-1">D</h1>
+        <h1 className="font-space font-bold text-5xl pt-4">E</h1>
+        <h1 className="font-space font-bold text-4xl pt-5">C</h1>
+        <h1 className="font-space font-bold text-5xl pt-2">R</h1>
+        <h1 className="font-space font-bold text-6xl pt-2">I</h1>
+        <h1 className="font-space font-bold text-4xl pt-5">P</h1>
+        <h1 className="font-space font-bold text-5xl pt-4">T</h1>
+        <h1 className="font-space font-bold text-6xl pt-2">A</h1>
       </div>
 
       <section className="px-44 pt-45 pb-15">
