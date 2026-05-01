@@ -16,6 +16,9 @@ import { ScrollSmoother } from "gsap/dist/ScrollSmoother";
 import { useGSAP } from "@gsap/react";
 import { NavigationMenuHome2 } from "@/components/bar/navmenu2";
 
+import NavbarLayout from "@/components/bar/navbarLayout";
+import BottomNav from "@/components/bar/bottomNav";
+
 const hagrid = localFont({
   src: "../fonts/HagridTrial-Regular.woff2",
   variable: "--font-hagrid",
@@ -66,7 +69,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${hagrid.variable} ${fagun.variable} antialiased`}>
-        <NavigationMenuHome2 />
+        <NavbarLayout />
+        <BottomNav />
         <div id="smooth-wrapper">
           <div id="smooth-content">{children}</div>
         </div>

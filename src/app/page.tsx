@@ -167,9 +167,18 @@ export default function Home() {
 
   return (
     <>
-      <main className="scroll-smooth">
+      <main
+        className="scroll-smooth relative min-h-screen"
+        style={{
+          backgroundImage: "url('/image/bgnovo.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "top",
+          backgroundAttachment: "fixed",
+        }}
+      >
         <section id="inicio">
-          <div className="relative h-screen w-full mb-30">
+          {/* <div className="relative h-screen w-full mb-30"> */}
+          <div className="relative h-screen w-full z-10">
             {/* <Navbar /> */}
             <div className="px-10 py-12">{/* <NavigationMenuHome /> */}</div>
 
@@ -180,8 +189,14 @@ export default function Home() {
               className="object-cover"
             /> */}
 
-            <div className="absolute inset-0 z-0 pointer-events-none">
-              <video
+            <div
+              className="absolute inset-0 z-0 pointer-events-none"
+              // style={{
+              //   background:
+              //     "linear-gradient(to bottom, transparent 60%, #00322A 100%)",
+              // }}
+            >
+              {/* <video
                 autoPlay
                 loop
                 muted
@@ -191,7 +206,13 @@ export default function Home() {
                 className="w-full h-full object-cover pointer-events-none"
               >
                 <source src="/video/videoBg2.mp4" type="video/mp4" />
-              </video>
+              </video> */}
+              {/* <Image
+                src="/image/bgnovo.png"
+                alt="Imagem de fundo"
+                fill
+                className="object-cover object-top"
+              /> */}
               {/* Escudo invisível para o Lucid Mode do Opera */}
               <div className="absolute inset-0 bg-transparent pointer-events-none z-10" />
             </div>
@@ -203,7 +224,7 @@ export default function Home() {
               className="object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             /> */}
             <Image
-              src="/image/logo.png"
+              src="/image/logoSVG.svg"
               alt="Logo"
               width={469}
               height={138}
@@ -212,7 +233,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="max-w-[1900px] mx-auto w-full px-6 space-y-20">
+        <div className="max-w-[1900px] mx-auto w-full px-6 space-y-20 pt-60">
           <section id="quem-somos" className="max-w-ful mx-auto px-4 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center xl:gap-20">
               {aboutCards.map((proj) => (
@@ -226,7 +247,7 @@ export default function Home() {
         </div>
 
         <footer>
-          <div className="w-full h-[260px] bg-black flex justify-between items-center">
+          <div className="w-full h-[260px] bg-black flex justify-between items-center border-0">
             {/* esquerda */}
             <div className="flex flex-col ml-12">
               <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl">
@@ -268,6 +289,15 @@ export default function Home() {
                 Instagram
               </a>
             </div>
+          </div>
+          <div className="bg-black pt-80 w-full overflow-hidden">
+            <Image
+              src="/image/logoFooter.svg"
+              alt="Logo"
+              width={1980}
+              height={500}
+              // className="object-contain"
+            />
           </div>
         </footer>
       </main>

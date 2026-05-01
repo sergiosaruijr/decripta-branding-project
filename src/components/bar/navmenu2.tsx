@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { createPortal } from "react-dom";
 
 const NAV_ITEMS = [
   // { href: "#projetos", title: "Projetos" },
@@ -86,13 +87,19 @@ export function NavigationMenuHome2() {
     }, 50); // delay mínimo só pra garantir que o overlay sumiu do DOM
   }
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
       <button
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label={open ? "Fechar menu" : "Abrir menu"}
-        className="fixed top-5 left-5 z-[60] flex items-center gap-2 px-4 py-2
+        className="flex items-center gap-2 px-4 py-2
           rounded-lg text-sm tracking-wide select-none
           border border-[#c8f135]/20
           bg-[#0a1208]/70 backdrop-blur-xl
@@ -115,38 +122,54 @@ export function NavigationMenuHome2() {
         </span>
       </button>
 
-      <div
-        className={`fixed inset-0 z-50 flex
+      {mounted &&
+        createPortal(
+          <div
+            className={`fixed inset-0 z-50 flex
         ${isNavigating ? "" : "transition-all duration-500"}
         ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
-      >
-        {/* esquerda */}
-        <div
-          className={`relative flex flex-col justify-center
+          >
+            {/* esquerda */}
+            <div
+              className={`relative flex flex-col justify-center
             w-full md:w-1/2 h-full px-12
             bg-[#0a1208]/90 backdrop-blur-xl
             border-r border-[#c8f135]/10
             transition-transform duration-500 ease-out
             ${open ? "translate-x-0" : "-translate-x-8"}`}
-        >
-          <p className="text-[10px] tracking-[.25em] text-white/25 uppercase mb-12">
-            Decripta — branding
-          </p>
+            >
+              <button
+                onClick={() => setOpen(false)}
+                className="absolute top-5 left-12 flex items-center justify-center w-9 h-9
+      rounded-lg border border-[#c8f135]/20
+      bg-[#0a1208]/70 text-white/80 hover:text-white
+      transition-all duration-300"
+              >
+                <span className="relative w-3 h-3 flex items-center justify-center">
+                  <span className="absolute block w-3 h-px bg-current rounded-full rotate-45" />
+                  <span className="absolute block w-3 h-px bg-current rounded-full -rotate-45" />
+                </span>
+              </button>
+              <p className="text-[10px] tracking-[.25em] text-white/25 uppercase mb-12">
+                Decripta — branding
+              </p>
 
-          <nav>
-            <ul className="flex flex-col">
-              {NAV_ITEMS.map((item, i) => (
-                <li
-                  key={item.href}
-                  className={
-                    i < NAV_ITEMS.length - 1 ? "border-b border-white/8" : ""
-                  }
-                  style={{ transitionDelay: open ? `${i * 60}ms` : "0ms" }}
-                >
-                  <a
-                    href={item.href}
-                    onClick={(e) => handleNavClick(e, item.href)}
-                    className={`group relative flex items-center justify-between
+              <nav>
+                <ul className="flex flex-col">
+                  {NAV_ITEMS.map((item, i) => (
+                    <li
+                      key={item.href}
+                      className={
+                        i < NAV_ITEMS.length - 1
+                          ? "border-b border-white/8"
+                          : ""
+                      }
+                      style={{ transitionDelay: open ? `${i * 60}ms` : "0ms" }}
+                    >
+                      <a
+                        href={item.href}
+                        onClick={(e) => handleNavClick(e, item.href)}
+                        className={`group relative flex items-center justify-between
                       py-5 text-lg font-medium tracking-wide
                       transition-colors duration-200
                       ${
@@ -154,75 +177,79 @@ export function NavigationMenuHome2() {
                           ? "text-[#c8f135]"
                           : "text-white/75 hover:text-[#c8f135]"
                       }`}
-                  >
-                    <span
-                      className="absolute left-0 top-1/2 -translate-y-1/2
+                      >
+                        <span
+                          className="absolute left-0 top-1/2 -translate-y-1/2
                       w-[2px] h-0 bg-[#c8f135] rounded-full
                       transition-all duration-200 group-hover:h-6"
-                    />
-                    <span className="pl-4">{item.title}</span>
+                        />
+                        <span className="pl-4">{item.title}</span>
 
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      className="opacity-0 -translate-x-2 group-hover:opacity-100
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          className="opacity-0 -translate-x-2 group-hover:opacity-100
                         group-hover:translate-x-0 transition-all duration-200"
-                    >
-                      <path
-                        d="M2 12L12 2M12 2H5M12 2V9"
-                        stroke="#c8f135"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                        >
+                          <path
+                            d="M2 12L12 2M12 2H5M12 2V9"
+                            stroke="#c8f135"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
 
-          {/* rodapé adicionar mais info ou trocar pelo outro do inicio */}
-          <div className="absolute bottom-8 left-12 right-12 flex">
-            <p className="text-[11px] text-white/25 tracking-wide">
-              decripta.branding@gmail.com
-            </p>
-            {/* <p className="text-white/25 text-sm font-amifer tracking-wider pl-24">
+              {/* rodapé adicionar mais info ou trocar pelo outro do inicio */}
+              <div className="absolute bottom-8 left-12 right-12 flex">
+                <p className="text-[11px] text-white/25 tracking-wide">
+                  decripta.branding@gmail.com
+                </p>
+                {/* <p className="text-white/25 text-sm font-amifer tracking-wider pl-24">
               +55 43 99999-9999
             </p> */}
-          </div>
-        </div>
+              </div>
+            </div>
 
-        {/* direita */}
-        <div
-          className={`hidden md:grid md:w-1/2 h-full
+            {/* direita */}
+            <div
+              className={`hidden md:grid md:w-1/2 h-full
             grid-cols-2 grid-rows-3 gap-2 p-2
             bg-[#080f06]
             transition-transform duration-500 ease-out
             ${open ? "translate-x-0" : "translate-x-8"}`}
-        >
-          {GRID_IMAGES.map((img, i) => (
-            <div
-              key={i}
-              className={`relative overflow-hidden rounded-lg ${img.span}
+            >
+              {GRID_IMAGES.map((img, i) => (
+                <div
+                  key={i}
+                  className={`relative overflow-hidden rounded-lg ${img.span}
                 transition-transform duration-700 ease-out
                 hover:scale-[1.02]`}
-              style={{ transitionDelay: open ? `${i * 40 + 100}ms` : "0ms" }}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover opacity-80 hover:opacity-100
+                  style={{
+                    transitionDelay: open ? `${i * 40 + 100}ms` : "0ms",
+                  }}
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover opacity-80 hover:opacity-100
                   transition-opacity duration-300"
-                sizes="25vw"
-              />
+                    sizes="25vw"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>,
+          document.body,
+        )}
     </>
   );
 }

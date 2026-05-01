@@ -59,7 +59,7 @@ export default function DecriptaPageApproach() {
             </p>
           </div>
 
-          <div className="flex-1 bg-[#2A2A2A] p-12 flex flex-col">
+          <div className="flex-1 bg-[#2A2A2A] p-12 flex flex-col hover:border-1 hover:border-[#a8e038]">
             <LayersIcon className="mb-10 text-[#a8e038]" />
             {/* colocar inter */}
             <h1 className="font-space text-4xl text-[#E2E2E2] mb-6">
