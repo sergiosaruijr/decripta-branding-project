@@ -1,22 +1,10 @@
 import { ArrowRight, LampIcon, LayersIcon, TargetIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function DecriptaPageApproach() {
   return (
     <div className="bg-[#00322A] text-[#f5f5f0] min-h-screen font-sans">
-      <div className="absolute w-full h-[120px] md:h-[80px] overflow-hidden bg-[#a8e038] flex justify-center">
-        <Link href="/">
-          <h1 className="font-space font-bold text-7xl pt-1">D</h1>
-          <h1 className="font-space font-bold text-5xl pt-4">E</h1>
-          <h1 className="font-space font-bold text-4xl pt-5">C</h1>
-          <h1 className="font-space font-bold text-5xl pt-2">R</h1>
-          <h1 className="font-space font-bold text-6xl pt-2">I</h1>
-          <h1 className="font-space font-bold text-4xl pt-5">P</h1>
-          <h1 className="font-space font-bold text-5xl pt-4">T</h1>
-          <h1 className="font-space font-bold text-6xl pt-2">A</h1>
-        </Link>
-      </div>
-
       <section className="px-44 pt-45 pb-15">
         {/* <p className="text-[#a8e038] text-xs uppercase tracking-widest mb-6">
           Estratégia de marca
@@ -37,7 +25,7 @@ export default function DecriptaPageApproach() {
 
       <section className="md:px-20 lg:px-44 px-4 w-full">
         <div className="flex flex-row w-full min-h-[400px]">
-          <div className="flex-1 bg-[#1B1B1B] p-12 flex flex-col">
+          <div className="flex-1 bg-[#1B1B1B] p-12 flex flex-col hover:border-[#a8e038] hover:border-1">
             <LampIcon className="mb-10 text-[#a8e038]" />
             {/* colocar inter */}
             <h1 className="font-space text-4xl text-[#E2E2E2] mb-6">Clareza</h1>
@@ -47,7 +35,7 @@ export default function DecriptaPageApproach() {
             </p>
           </div>
 
-          <div className="flex-1 bg-[#1F1F1F] p-12 flex flex-col">
+          <div className="flex-1 bg-[#1F1F1F] p-12 flex flex-col hover:border-[#a8e038] hover:border-1">
             <TargetIcon className="mb-10 text-[#a8e038]" />
             {/* colocar inter */}
             <h1 className="font-space text-4xl text-[#E2E2E2] mb-6 ">
@@ -141,19 +129,20 @@ export default function DecriptaPageApproach() {
           verdadeiro potencial da sua <br />
           marca?
         </h2>
-        <div>
+        <div className="text-[#f5f5f0] hover:text-[#A0D81D]">
           <a
             href="#"
-            className="inline-flex items-center bg-[#0d2818] text-[#A0D81D] text-sm font-semibold px-8 py-3 "
+            className="inline-flex items-center bg-[#0d2818] text-sm font-semibold px-8 py-3 font-inter rounded-4xl"
           >
             <p className="pr-2">SOLICITAR DIAGNÓSTICO</p>
-            <ArrowRight className="text-[#A0D81D]" />
+            <ArrowRight className="" />
           </a>
         </div>
       </section>
 
       <footer>
-        <div className="w-full h-[220px] bg-black flex justify-between items-center">
+        <div className="w-full h-[260px] bg-black flex justify-between items-center border-0">
+          {/* esquerda */}
           <div className="flex flex-col ml-12">
             <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl">
               DECRIPTA
@@ -194,6 +183,15 @@ export default function DecriptaPageApproach() {
               Instagram
             </a>
           </div>
+        </div>
+        <div className="bg-black pt-80 w-full overflow-hidden">
+          <Image
+            src="/image/logoFooter.svg"
+            alt="Logo"
+            width={1980}
+            height={500}
+            // className="object-contain"
+          />
         </div>
       </footer>
     </div>

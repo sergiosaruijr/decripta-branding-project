@@ -13,6 +13,7 @@ module.exports = {
         amifer: ["Amifer", "serif"],
         manrope: ["Manrope Variable", "sans-serif"],
         space: ["Space Grotesk Variable", "sans-serif"],
+        inter: ["Inter Variable", "sans-serif"],
       },
     },
     screens: {

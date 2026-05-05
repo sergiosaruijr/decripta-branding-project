@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function DecriptaPageApproach() {
   return (
@@ -74,7 +75,8 @@ export default function DecriptaPageApproach() {
       </section>
 
       <footer>
-        <div className="w-full h-[220px] bg-black flex justify-between items-center">
+        <div className="w-full h-[260px] bg-black flex justify-between items-center border-0">
+          {/* esquerda */}
           <div className="flex flex-col ml-12">
             <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl">
               DECRIPTA
@@ -115,6 +117,15 @@ export default function DecriptaPageApproach() {
               Instagram
             </a>
           </div>
+        </div>
+        <div className="bg-black pt-80 w-full overflow-hidden">
+          <Image
+            src="/image/logoFooter.svg"
+            alt="Logo"
+            width={1980}
+            height={500}
+            // className="object-contain"
+          />
         </div>
       </footer>
     </div>

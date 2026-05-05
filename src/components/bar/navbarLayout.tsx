@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { NavigationMenuHome2 } from "@/components/bar/navmenu2";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function NavbarLayout() {
   const [visible, setVisible] = useState(true);
@@ -22,10 +24,19 @@ export default function NavbarLayout() {
           : "opacity-0 -translate-y-full pointer-events-none"
       }`}
     >
-      <div>
-        <p className="text-white">Teste Logo</p>
+      <Link href="/">
+        {/* <p className="text-white">Teste Logo</p> */}
+        <Image
+          src="/image/logoFooter.svg"
+          alt="Logo"
+          width={165}
+          height={37}
+          className="lg:ml-12 md:ml-6"
+        />
+      </Link>
+      <div className="lg:mr-12 md:mr-6">
+        <NavigationMenuHome2 />
       </div>
-      <NavigationMenuHome2 />
     </div>
   );
 }

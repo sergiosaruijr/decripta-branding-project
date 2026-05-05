@@ -4,7 +4,7 @@ import * as z from "zod";
 import { CustomSelect } from "./CustomSelect";
 import { FaLinkedin } from "react-icons/fa6";
 import { SiX } from "react-icons/si";
-import { Mail } from "lucide-react";
+import { AtSign, Mail, Phone } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(1, "Informe o nome"),
@@ -58,37 +58,47 @@ export function FormDecripta() {
             <br />
             SUA MARCA.
           </h2>
-          <h4 className="text-lg max-w-[450px] font-manrope">
+          <h4 className="text-lg max-w-[450px] font-manrope mb-5">
             Se você busca clareza estratégica, posicionamento sólido e
             construção de valor de longo prazo, estamos prontos para iniciar a
             conversa.
             {/* <br /> */}
           </h4>
 
-          <div className="border-t border-[#131313] max-w-[450px] my-12"></div>
+          <div className="border-t border-[#131313] max-w-[450px] my-15"></div>
 
           <div className="space-y-4 max-w-[450px] ">
             <a
               href="mailto:decriptabranding@gmail.com"
-              className="text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity text-center w-fit flex gap-5"
+              className="text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity  w-fit flex gap-5 mb-8"
             >
-              <Mail size={20} /> DECRIPTABRANDING@GMAIL.COM
+              <AtSign size={20} />
+              <div className="flex flex-col items-start">
+                <p className="text-sm font-manrope uppercase">
+                  decripta.branding
+                </p>
+                <p className="text-md font-manrope">
+                  decriptabranding@gmail.com
+                </p>
+              </div>
             </a>
-            <a
+            {/* <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex  text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity text-center w-fit gap-5"
             >
               <SiX size={20} /> TWITTER (X)
-            </a>
+            </a> */}
             <a
-              href="https://www.linkedin.com/company/decripta-branding"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex  text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#c8f135] transition-opacity text-center w-fit gap-5"
+              href="mailto:decriptabranding@gmail.com"
+              className="text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity  w-fit flex gap-5 mb-8"
             >
-              <FaLinkedin size={20} /> LINKEDIN
+              <Phone size={20} />
+              <div className="flex flex-col items-start">
+                <p className="text-sm font-manrope uppercase">Fale conosco</p>
+                <p className="text-md font-manrope">+55 43 98850-7817</p>
+              </div>
             </a>
           </div>
         </div>
