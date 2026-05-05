@@ -184,14 +184,19 @@ export default function DecriptaPageApproach() {
             </a>
           </div>
         </div>
+        {/* Recorte teste para o logo gigante */}
         <div className="bg-black pt-80 w-full overflow-hidden">
-          <Image
-            src="/image/logoFooter.svg"
-            alt="Logo"
-            width={1980}
-            height={500}
-            // className="object-contain"
-          />
+          <div className="relative w-full h-[200px] md:h-[350px] flex items-center justify-center">
+            <div className="absolute bottom-[-15%] w-[110%]">
+              <Image
+                src="/image/logoFooter.svg"
+                alt="Logo"
+                width={1980}
+                height={500}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </footer>
     </div>
