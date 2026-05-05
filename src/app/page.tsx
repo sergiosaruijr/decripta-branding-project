@@ -17,6 +17,7 @@ import { CustomSelect } from "@/components/contact/CustomSelect";
 import AboutCard from "@/components/common/about-card";
 import { FormDecripta } from "@/components/contact/formDecripta";
 import { FormTest } from "@/components/contact/formtest";
+import FooterDecripta from "@/components/common/footer";
 // import {
 //   Select,
 //   SelectContent,
@@ -246,65 +247,7 @@ export default function Home() {
           </div>
         </div>
 
-        <footer>
-          <div className="w-full h-[260px] bg-black flex justify-between items-center border-0">
-            {/* esquerda */}
-            <div className="flex flex-col ml-12">
-              <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl">
-                DECRIPTA
-              </h3>
-              <p className="text-[12px] text-[#ADAAAA] uppercase font-manrope font-light">
-                © 2024 Strategic Branding Studio All Rights Reserved.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 mr-12 uppercase gap-x-15 gap-y-5 font-bold text-[12px] !font-hagrid">
-              <a href="/legal" className="text-[#C5FE00] hover:text-[#ADAAAA]">
-                Legal
-              </a>
-              <a href="/social" className="text-[#C5FE00] hover:text-[#ADAAAA]">
-                Social
-              </a>
-              <a
-                href="/privacyPolicy"
-                className="text-[#ADAAAA] hover:text-[#C5FE00]"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/linkedln"
-                className="text-[#ADAAAA] hover:text-[#C5FE00] "
-              >
-                Linkedln
-              </a>
-              <a
-                href="/termsOfService"
-                className="text-[#ADAAAA] hover:text-[#C5FE00]"
-              >
-                Terms of service
-              </a>
-              <a
-                href="/instagram"
-                className="text-[#ADAAAA] hover:text-[#C5FE00]"
-              >
-                Instagram
-              </a>
-            </div>
-          </div>
-          {/* Recorte teste para o logo gigante */}
-          <div className="bg-black pt-80 w-full overflow-hidden">
-            <div className="relative w-full h-[200px] md:h-[350px] flex items-center justify-center">
-              <div className="absolute bottom-[-15%] w-[110%]">
-                <Image
-                  src="/image/logoFooter.svg"
-                  alt="Logo"
-                  width={1980}
-                  height={500}
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
-        </footer>
+        <FooterDecripta />
       </main>
     </>
   );

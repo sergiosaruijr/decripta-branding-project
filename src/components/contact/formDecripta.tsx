@@ -270,6 +270,19 @@ export function FormDecripta() {
             >
               Enviar mensagem
             </button>
+
+            <div className="text-[#ADAAAA] text-[12px] flex flex-col justify-center items-center font-manrope uppercase ">
+              <p>
+                Ao enviar este formulário, você concorda com nossa{" "}
+                <a href="" className="font-extrabold">
+                  Política de Privacidade.
+                </a>
+              </p>
+              <p>
+                Respeitamos a confidencialidade do seu projeto. Responderemos em
+                até 48h úteis.
+              </p>
+            </div>
           </form>
         </div>
       </div>
