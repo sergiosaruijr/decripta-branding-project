@@ -8,14 +8,15 @@ const FooterDecripta = () => {
       <div className="w-full h-[260px] bg-black flex justify-between items-center border-0">
         {/* esquerda */}
         <div className="flex flex-col ml-12">
-          <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl">
+          <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl pb-2.5 font-manrope">
             DECRIPTA
           </h3>
-          <p className="text-[12px] text-[#ADAAAA] uppercase font-manrope font-light">
-            © 2024 Strategic Branding Studio All Rights Reserved.
+          <p className="text-[12px] text-[#ADAAAA] uppercase font-manrope">
+            © 2026 Decripta — Estúdio de Branding Estratégico. Todos os
+            direitos reservados.
           </p>
         </div>
-        <div className="grid grid-cols-2 mr-12 uppercase gap-x-15 gap-y-5 font-bold text-[12px] !font-hagrid">
+        <div className="grid grid-cols-2 mr-12 uppercase gap-x-15 gap-y-5 font-bold text-[14px] font-manrope">
           <a href="/legal" className="text-[#C5FE00] hover:text-[#ADAAAA]">
             Legal
           </a>
