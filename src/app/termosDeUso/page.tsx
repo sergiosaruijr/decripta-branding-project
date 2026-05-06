@@ -108,12 +108,12 @@ export default function PoliticaPrivacidade() {
           </div>
         </div>
 
-        <div className="flex flex-row justify-between">
-          <p className="font-inter font-medium text-3xl px-12 pt-14 pb-18">
+        <div className="flex flex-row justify-between  items-center">
+          <p className="font-inter font-medium text-3xl px-12 pt-22 pb-18">
             | Última atualização: Abril de 2026.
           </p>
-          <div className="flex flex-col">
-            <p className="font-semibold">Jurisdição</p>
+          <div className="flex flex-col font-inter font-medium text-3xl px-12 pt-14 pb-18 items-start ">
+            <p className="font-extrabold">Jurisdição</p>
             <p>Estes Termos são regidos pelas leis do Brasil.</p>
           </div>
         </div>
