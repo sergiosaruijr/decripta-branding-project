@@ -94,10 +94,11 @@ export default function Home() {
   const aboutCards = [
     {
       href: "/sobre",
-      imageUrl: "/image/decriptaTexto.png",
+      imageUrl: "/image/decriptaTexto.svg",
       title: "Conheça a Decripta",
       description:
         "Na Decripta, cada marca é tratada como um ativo estratégico. Decodificamos essência, estruturamos posicionamento e transformamos percepção em valor de mercado.",
+      objectFit: "contain",
     },
     {
       href: "/abordagem",
@@ -108,10 +109,11 @@ export default function Home() {
     },
     {
       href: "/metodologia",
-      imageUrl: "/image/cartaoBranding2.png",
+      imageUrl: "/image/decriptaTexto2.svg",
       title: "Metodologia",
       description:
         "Nossa metodologia organiza significado antes de materializar forma.",
+      objectFit: "contain",
     },
   ];
 
@@ -238,7 +240,11 @@ export default function Home() {
           <section id="quem-somos" className="max-w-ful mx-auto px-4 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center xl:gap-20">
               {aboutCards.map((proj) => (
-                <AboutCard key={proj.href} {...proj} />
+                <AboutCard
+                  key={proj.href}
+                  {...proj}
+                  objectFit={proj.objectFit as "cover" | "contain"}
+                />
               ))}
             </div>
           </section>

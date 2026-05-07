@@ -28,18 +28,15 @@ export default function BottomNav() {
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}
       `}
     >
-      {/* logo pill */}
       <div className="bg-[#c8f135] text-black text-sm font-bold px-5 py-2 rounded-full">
         Decripta
       </div>
 
-      {/* menu pill */}
       <div
         className="relative bg-black/70 backdrop-blur-md text-white text-sm rounded-full px-10 py-2 cursor-pointer"
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
       >
-        {/* links — aparecem em hover */}
         <div
           className={`flex items-center gap-5 transition-all duration-300 overflow-hidden ${
             open ? "max-w-xs opacity-100" : "max-w-0 opacity-0"
@@ -49,14 +46,13 @@ export default function BottomNav() {
             <Link
               key={item.href}
               href={item.href}
-              className="whitespace-nowrap hover:text-[#c8f135] transition-colors"
+              className="whitespace-nowrap text-white/90 hover:text-[#c8f135] transition-colors duration-200 relative z-10"
             >
               {item.title}
             </Link>
           ))}
         </div>
 
-        {/* label padrão */}
         <span
           className={`absolute inset-0 flex items-center justify-center transition-opacity duration-200 ${
             open ? "opacity-0" : "opacity-100"

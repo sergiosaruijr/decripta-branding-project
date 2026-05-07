@@ -6,20 +6,29 @@ type CardPostProps = {
   imageUrl: string;
   title: string;
   description: string;
+  objectFit?: "cover" | "contain";
 };
 
-const AboutCard = ({ href, imageUrl, title, description }: CardPostProps) => {
+const AboutCard = ({
+  href,
+  imageUrl,
+  title,
+  description,
+  objectFit = "cover",
+}: CardPostProps) => {
   return (
     <Link
       href={href}
       className="group flex flex-col h-full w-full max-w-[480px] overflow-hidden rounded-lg bg-transparent  "
     >
-      <div className="relative mb-2 aspect-[0.8] w-[full] overflow-hidden rounded-[60px]">
+      <div className="relative mb-2 aspect-[0.8] w-[full] overflow-hidden rounded-[60px] bg-[#00322A] ">
         <Image
           src={imageUrl}
           alt={title}
           fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          className={`transition-transform duration-300 group-hover:scale-105 ${
+            objectFit === "contain" ? "object-contain p-20" : "object-cover"
+          }`}
         />
       </div>
       <div className="flex flex-col flex-grow space-y-2 rounded-3xl p-8 pt-10 transition-colors duration-300 group-hover:bg-[hsla(0,0%,80%,0.5)] bg-[#D9D9D9]/20">
