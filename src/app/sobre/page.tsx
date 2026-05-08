@@ -67,37 +67,37 @@ export default function DecriptaPageAbout() {
           />
         </div> */}
 
-      <section className="px-44 pt-45 pb-15">
+      <section className="px-10 lg:px-44 pt-35 lg:pt-45 pb-15">
         {/* <p className="text-[#a8e038] text-xs uppercase tracking-widest mb-6">
           Estratégia de marca
         </p> */}
-        <h1 className="text-[75px] leading-tight max-w-4xl font-space mb-10">
+        <h1 className="text-[8vw] lg:text-[4vw] leading-tight max-w-4xl font-space mb-10">
           <span className="block text-[#E2E2E2]">Decodificando </span>
           <span className="block text-white">marcas para construir</span>
-          <span className="text-[#a8e038] text-8xl font-bold">
+          <span className="text-[#a8e038] text-[10vw] lg:text-[6vw] font-bold">
             relevância real.
           </span>
         </h1>
-        <p className="mt-6 text-[#C0C8C4] text-4xl leading-relaxed max-w-6xl font-light">
+        <p className="mt-6 text-[#C0C8C4] text-[5vw] lg:text-[2vw] leading-relaxed max-w-6xl font-light">
           A Decripta nasce da necessidade de ir além do visual… <br />
           transformamos confusão em clareza, e clareza em valor.
         </p>
       </section>
 
-      <section className="px-44 pb-25">
+      <section className="px-10 lg:px-44 pb-25">
         <div className="w-12 h-0.5 bg-[#a8e038] mb-8" />
-        <h1 className="text-[75px] leading-tight max-w-4xl font-space mb-5 font-semibold">
+        <h1 className="text-[8vw] lg:text-[4vw] leading-tight font-space mb-5 font-semibold">
           {/* mudar para inter a font */}
           Para quem é a Decripta?
         </h1>
-        <p className="text-[#C0C8C4] text-4xl leading-relaxed max-w-3xl font-light">
+        <p className="text-[#C0C8C4] text-[5vw] lg:text-[2vw] leading-relaxed max-w-3xl font-light">
           Fundadores visionários que sentem que sua marca está além do valor que
           entregam.
         </p>
       </section>
 
       <section className="bg-[#a8e038] px-8 py-40 text-center">
-        <h2 className="text-6xl font-regular text-[#00322A] mb-15">
+        <h2 className="text-[8vw] lg:text-[5vw] font-regular text-[#00322A] mb-15">
           {/* mudar para font inter */}
           Pronto para decifrar <br />
           sua marca?

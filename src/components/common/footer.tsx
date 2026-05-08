@@ -7,7 +7,7 @@ const FooterDecripta = () => {
     <footer>
       <div className="w-full sm:h-[260px] bg-black flex flex-col sm:justify-between sm:items-center border-0 sm:flex-row pt-15 ">
         {/* esquerda */}
-        <div className="flex flex-col sm:ml-12 mx-6 pb-10 bg-red-500 pr-2">
+        <div className="flex flex-col sm:ml-12 mx-6 pb-10  pr-2">
           <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl pb-2.5 font-manrope">
             DECRIPTA
           </h3>
@@ -16,7 +16,7 @@ const FooterDecripta = () => {
             direitos reservados.
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:w-[400px] justify-between sm:mr-12 mx-6 uppercase gap-y-5 font-bold sm:text-[14px] font-manrope text-[12px] bg-blue-500 ">
+        <div className="grid grid-cols-2 sm:w-[400px] justify-between sm:mr-12 mx-6 uppercase gap-y-5 font-bold sm:text-[14px] font-manrope text-[12px] pt-5 ">
           {/* Coluna 1 (Legal) - Fica na esquerda */}
           <div className="flex flex-col gap-y-5">
             <a href="/legal" className="text-[#C5FE00] hover:text-[#ADAAAA]">

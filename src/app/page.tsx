@@ -231,7 +231,7 @@ export default function Home() {
               alt="Logo"
               width={469}
               height={138}
-              className="object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 "
+              className="object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 px-10 sm:px-0"
             />
           </div>
         </section>
