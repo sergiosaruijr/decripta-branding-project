@@ -5,9 +5,9 @@ import Image from "next/image";
 const FooterDecripta = () => {
   return (
     <footer>
-      <div className="w-full h-[260px] bg-black flex justify-between items-center border-0">
+      <div className="w-full sm:h-[260px] bg-black flex flex-col sm:justify-between sm:items-center border-0 sm:flex-row pt-15">
         {/* esquerda */}
-        <div className="flex flex-col ml-12">
+        <div className="flex flex-col sm:ml-12 mx-6 pb-10">
           <h3 className="uppercase text-[#F3FFCD] text-bold text-2xl pb-2.5 font-manrope">
             DECRIPTA
           </h3>
@@ -16,7 +16,7 @@ const FooterDecripta = () => {
             direitos reservados.
           </p>
         </div>
-        <div className="grid grid-cols-2 mr-12 uppercase gap-x-15 gap-y-5 font-bold text-[14px] font-manrope">
+        <div className="grid grid-cols-2 sm:mr-12 mx-6 uppercase gap-x-15 gap-y-5 font-bold sm:text-[14px] font-manrope text-[12px]  ">
           <a href="/legal" className="text-[#C5FE00] hover:text-[#ADAAAA]">
             Legal
           </a>
@@ -44,7 +44,7 @@ const FooterDecripta = () => {
         </div>
       </div>
       {/* Recorte teste para o logo gigante */}
-      <div className="bg-black pt-80 w-full overflow-hidden">
+      <div className="bg-black sm:pt-80 pt-40 w-full overflow-hidden border-0">
         <div className="relative w-full h-[200px] md:h-[350px] flex items-center justify-center">
           <div className="absolute bottom-[-15%] w-[110%]">
             <Image
