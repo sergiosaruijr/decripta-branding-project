@@ -62,28 +62,29 @@ export function FormDecripta() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background px-8 py-20">
-      <div className="max-w-8xl w-full grid md:grid-cols-2 gap-32 overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-background px-6 py-12 md:py-20">
+      <div className="max-w-[1920px] w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32 overflow-hidden">
         {/* Lado esquerdo */}
-        <div className=" flex flex-col  max-w-4xl w-full">
-          <p className="text-[#131313] text-sm font-manrope font-semibold tracking-[0.2em] mb-5.5">
+        <div className="flex flex-col w-full">
+          <p className="text-[#131313] text-[10px] sm:text-sm font-manrope font-semibold tracking-[0.2em] mb-4">
             INÍCIO DE PROJETO
           </p>
-          <h2 className="text-5xl md:text-6xl font-space font-bold text-[#131313] mb-10 w-fit pr-10">
+          <h2 className="text-[12vw] leading-[1.1] sm:text-6xl font-space font-bold text-[#131313] mb-8 uppercase">
             VAMOS
             <br />
             DECODIFICAR
             <br />
             SUA MARCA.
           </h2>
-          <h4 className="text-lg max-w-[450px] font-manrope mb-5">
+          <h4 className="text-base sm:text-lg max-w-full md:max-w-[450px] font-manrope mb-5 text-[#131313]/80">
             Se você busca clareza estratégica, posicionamento sólido e
             construção de valor de longo prazo, estamos prontos para iniciar a
             conversa.
-            {/* <br /> */}
           </h4>
 
-          <div className="border-t border-[#131313] max-w-[450px] my-15"></div>
+          {/* <br /> */}
+
+          <div className="border-t border-[#131313] max-w-[450px] md:my-15 my-10"></div>
 
           <div className="space-y-4 max-w-[450px] ">
             <a
@@ -91,11 +92,11 @@ export function FormDecripta() {
               className="text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity  w-fit flex gap-5 mb-8"
             >
               <AtSign size={20} />
-              <div className="flex flex-col items-start">
-                <p className="text-sm font-manrope uppercase">
+              <div className="flex flex-col items-start ">
+                <p className="text-xs font-manrope uppercase sm:text-sm">
                   decripta.branding
                 </p>
-                <p className="text-md font-manrope">
+                <p className="text-md font-manrope text-sm sm:text-md">
                   decriptabranding@gmail.com
                 </p>
               </div>
@@ -114,8 +115,12 @@ export function FormDecripta() {
             >
               <Phone size={20} />
               <div className="flex flex-col items-start">
-                <p className="text-sm font-manrope uppercase">Fale conosco</p>
-                <p className="text-md font-manrope">+55 43 98850-7817</p>
+                <p className="text-xs font-manrope uppercase sm:text-md">
+                  Fale conosco
+                </p>
+                <p className="text-md font-manrope text-xs sm:text-sm">
+                  +55 43 98850-7817
+                </p>
               </div>
             </a>
           </div>
@@ -124,7 +129,7 @@ export function FormDecripta() {
         {/* Lado direito */}
         <div className="bg-[#131313] p-12 flex flex-col justify-center rounded-sm">
           <form className="space-y-12 " onSubmit={handleSubmit(onSubmit)}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
               <div className="flex flex-col">
                 <label
                   htmlFor="nome"
@@ -135,7 +140,7 @@ export function FormDecripta() {
                 <input
                   type="text"
                   id="nome"
-                  className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                  className="bg-transparent text-sm sm:text-md border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
                   placeholder="Como devemos te chamar?"
                   {...register("name")}
                 />
@@ -147,14 +152,14 @@ export function FormDecripta() {
               <div className="flex flex-col">
                 <label
                   htmlFor="email"
-                  className="text-white/60 text-[10px]  tracking-[0.2em] mb-2 uppercase font-manrope"
+                  className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase font-manrope "
                 >
                   EMAIL
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                  className="bg-transparent border-b text-sm sm:text-md border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
                   placeholder="seuemail@email.com"
                   {...register("email")}
                 />
@@ -174,7 +179,7 @@ export function FormDecripta() {
                 <input
                   type="text"
                   id="empresa"
-                  className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                  className="bg-transparent border-b text-sm sm:text-md border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
                   placeholder="Nome da sua organizacao"
                   {...register("company")}
                 />
@@ -195,7 +200,7 @@ export function FormDecripta() {
                 <input
                   type="text"
                   id="cargo"
-                  className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                  className="bg-transparent border-b text-sm sm:text-md border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
                   placeholder="Ex: Diretor de Marketing"
                   {...register("position")}
                 />
@@ -272,7 +277,7 @@ export function FormDecripta() {
               <textarea
                 id="mensagem"
                 rows={4}
-                className="bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
+                className="bg-transparent border-b text-sm sm:text-md border-white/20 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-white transition-colors font-manrope"
                 placeholder="Conte-nos um pouco sobre o que você deseja alcançar...?"
                 {...register("message")}
               />
@@ -284,22 +289,28 @@ export function FormDecripta() {
 
             <button
               type="submit"
-              className="w-full bg-[#c7fe00d0] text-[#131313] py-4 rounded-[2px] text-sm font-bold tracking-wider hover:bg-[#C5FE00] hover:text-contact-blue transition-all duration-300 uppercase"
+              className="w-full bg-[#c7fe00d0] text-[#131313] py-4 rounded-[2px] text-sm sm:text-md font-bold tracking-wider hover:bg-[#C5FE00] hover:text-contact-blue transition-all duration-300 uppercase"
             >
               Enviar mensagem
             </button>
 
-            <div className="text-[#ADAAAA] text-[12px] flex flex-col justify-center items-center font-manrope uppercase ">
+            <div className="text-[#ADAAAA] text-[9px] sm:text-[10px] space-y-2 text-center font-manrope uppercase ">
               <p>
+                Ao enviar, você concorda com nossa{" "}
+                <a href="/politicaDePrivacidade" className="font-extrabold">
+                  Política de Privacidade.
+                </a>
+              </p>
+              <p>Respeitamos a confidencialidade do seu projeto.</p>
+              <p>Responderemos em até 48h úteis.</p>
+              {/* <p>
                 Ao enviar este formulário, você concorda com nossa{" "}
                 <a href="/politicaDePrivacidade" className="font-extrabold">
                   Política de Privacidade.
                 </a>
               </p>
-              <p>
-                Respeitamos a confidencialidade do seu projeto. Responderemos em
-                até 48h úteis.
-              </p>
+              <p>Respeitamos a confidencialidade do seu projeto.</p>
+              <p>Responderemos em até 48h úteis.</p> */}
             </div>
           </form>
         </div>

@@ -24,13 +24,13 @@ export function CustomSelect({
 
   return (
     <div className="flex flex-col relative font-manrope w-full">
-      <label className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase">
+      <label className="text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase ">
         {label}
       </label>
 
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="border-b border-white/20 py-3 text-white flex justify-between items-center cursor-pointer hover:border-white transition-colors"
+        className="border-b border-white/20 py-3 text-white flex justify-between items-center cursor-pointer hover:border-white transition-colors text-sm sm:text-md"
       >
         <span className={!selectedLabel ? "text-white/20" : "text-white"}>
           {selectedLabel || placeholder}
@@ -51,7 +51,7 @@ export function CustomSelect({
                 setIsOpen(false);
                 onChange(opt.value);
               }}
-              className="px-4 py-3 hover:bg-white/5 cursor-pointer text-white text-sm transition-colors"
+              className="px-4 py-3 hover:bg-white/5 cursor-pointer text-white text-sm transition-colors "
             >
               {opt.label}
             </li>
