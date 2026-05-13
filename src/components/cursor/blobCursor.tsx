@@ -75,8 +75,8 @@ export default function BlobCursor() {
       ref={blobRef}
       className="pointer-events-none fixed z-[99999]"
       style={{
-        width: hovered ? "50px" : "28px",
-        height: hovered ? "50px" : "28px",
+        width: hovered ? "38px" : "28px",
+        height: hovered ? "38px" : "28px",
         borderRadius: "50%",
         backgroundColor: "#a3e635",
         mixBlendMode: "difference",

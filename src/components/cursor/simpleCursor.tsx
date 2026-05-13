@@ -28,8 +28,8 @@ export default function SimpleCursor() {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 w-8 h-8 bg-red-500 rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2"
-      style={{ mixBlendMode: "difference" }}
+      className="fixed top-0 left-0 w-8 h-8 bg-[#a3e635] rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2"
+      //   style={{ mixBlendMode: "difference" }}
     />
   );
 }
