@@ -8,6 +8,7 @@ import "@fontsource-variable/manrope/wght.css";
 import "@fontsource-variable/space-grotesk/wght.css";
 import "@fontsource-variable/inter/wght.css";
 import localFont from "next/font/local";
+import { Toaster } from "sonner";
 
 import { useRef } from "react";
 
@@ -75,6 +76,7 @@ export default function RootLayout({
         <div id="smooth-wrapper">
           <div id="smooth-content">{children}</div>
         </div>
+        <Toaster position="bottom-right" richColors />
       </body>
     </html>
   );

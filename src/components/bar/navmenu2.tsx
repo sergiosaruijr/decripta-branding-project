@@ -104,10 +104,10 @@ export function NavigationMenuHome2() {
           border border-[#c8f135]/20
           bg-[#0a1208]/70 backdrop-blur-xl
           text-white/80 hover:text-white
-          hover:border-[#c8f135]/35 hover:bg-[#0a1208]/85
+          hover:border-[#c8f135]/55 hover:bg-[#0a1208]/85
           transition-all duration-300"
       >
-        <span>Menu</span>
+        <span className="font-manrope">Menu</span>
         <span className="relative w-3 h-3 flex items-center justify-center">
           <span
             className={`absolute block w-3 h-px bg-current rounded-full
@@ -210,7 +210,7 @@ export function NavigationMenuHome2() {
               {/* rodapé adicionar mais info ou trocar pelo outro do inicio */}
               <div className="absolute bottom-8 left-12 right-12 flex">
                 <p className="text-[11px] text-white/25 tracking-wide">
-                  decripta.branding@gmail.com
+                  decriptabranding@gmail.com
                 </p>
                 {/* <p className="text-white/25 text-sm font-amifer tracking-wider pl-24">
               +55 43 99999-9999
@@ -224,6 +224,7 @@ export function NavigationMenuHome2() {
             grid-cols-2 grid-rows-3 gap-2 p-2
             bg-[#080f06]
             transition-transform duration-500 ease-out
+
             ${open ? "translate-x-0" : "translate-x-8"}`}
             >
               {GRID_IMAGES.map((img, i) => (

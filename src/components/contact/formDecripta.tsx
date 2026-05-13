@@ -7,6 +7,8 @@ import { CustomSelect } from "./CustomSelect";
 import { FaLinkedin } from "react-icons/fa6";
 import { SiX } from "react-icons/si";
 import { AtSign, Mail, Phone } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(1, "Informe o nome"),
@@ -41,24 +43,31 @@ export function FormDecripta() {
     },
   });
 
+  const [formKey, setFormKey] = useState(0);
+
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     // console.log(data);
-    try {
-      const response = await fetch("/api/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+    const promise = fetch("/api/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    }).then(async (res) => {
+      if (!res.ok) throw new Error("Erro no servidor");
+      return res;
+    });
 
-      if (response.ok) {
-        alert("Mensagem enviada com sucesso!");
+    toast.promise(promise, {
+      loading: "Enviando sua mensagem...",
+      success: () => {
         reset();
-      } else {
-        alert("Ops, algo deu errado.");
-      }
-    } catch (error) {
-      console.error(error);
-    }
+        setFormKey((k) => k + 1);
+        return "Mensagem enviada com sucesso!";
+      },
+      error: (err) => {
+        console.error(err);
+        return "Ops, algo deu errado ao enviar.";
+      },
+    });
   };
 
   return (
@@ -128,7 +137,11 @@ export function FormDecripta() {
 
         {/* Lado direito */}
         <div className="bg-[#131313] p-12 flex flex-col justify-center rounded-sm">
-          <form className="space-y-12 " onSubmit={handleSubmit(onSubmit)}>
+          <form
+            className="space-y-12 "
+            onSubmit={handleSubmit(onSubmit)}
+            key={formKey}
+          >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
               <div className="flex flex-col">
                 <label
@@ -294,23 +307,25 @@ export function FormDecripta() {
               Enviar mensagem
             </button>
 
-            <div className="text-[#ADAAAA] text-[9px] sm:text-[10px] space-y-2 text-center font-manrope uppercase ">
-              <p>
+            <div className="text-[#ADAAAA] text-[9px] sm:text-[10px] text-center font-manrope uppercase ">
+              {/* <p>
                 Ao enviar, você concorda com nossa{" "}
                 <a href="/politicaDePrivacidade" className="font-extrabold">
                   Política de Privacidade.
                 </a>
               </p>
               <p>Respeitamos a confidencialidade do seu projeto.</p>
-              <p>Responderemos em até 48h úteis.</p>
-              {/* <p>
+              <p>Responderemos em até 48h úteis.</p> */}
+              <p>
                 Ao enviar este formulário, você concorda com nossa{" "}
                 <a href="/politicaDePrivacidade" className="font-extrabold">
                   Política de Privacidade.
                 </a>
               </p>
-              <p>Respeitamos a confidencialidade do seu projeto.</p>
-              <p>Responderemos em até 48h úteis.</p> */}
+              <p>
+                Respeitamos a confidencialidade do seu projeto. Responderemos em
+                até 48h úteis.
+              </p>
             </div>
           </form>
         </div>
