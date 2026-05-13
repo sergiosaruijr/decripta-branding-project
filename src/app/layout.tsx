@@ -16,10 +16,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollSmoother } from "gsap/dist/ScrollSmoother";
 import { useGSAP } from "@gsap/react";
-import { NavigationMenuHome2 } from "@/components/bar/navmenu2";
+// import { NavigationMenuHome2 } from "@/components/bar/navmenu2";
 
 import NavbarLayout from "@/components/bar/navbarLayout";
 import BottomNav from "@/components/bar/bottomNav";
+import BlobCursor from "@/components/cursor/blobCursor";
 
 const hagrid = localFont({
   src: "../fonts/HagridTrial-Regular.woff2",
@@ -71,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${hagrid.variable} ${fagun.variable} antialiased`}>
+        <BlobCursor />
         <NavbarLayout />
         <BottomNav />
         <div id="smooth-wrapper">

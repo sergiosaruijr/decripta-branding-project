@@ -120,7 +120,8 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    /* @apply border-border outline-ring/50; */
+    /* cursor: none; */
   }
   body {
     @apply bg-background text-foreground;
@@ -135,6 +136,12 @@
   /* .rgx-button-wrapper {
     display: none !important;
   } */
+}
+
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
 }
 
 /* Custom scrollbar */
