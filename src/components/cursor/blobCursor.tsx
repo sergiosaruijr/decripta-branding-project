@@ -27,7 +27,6 @@ export default function BlobCursor() {
       const speed = Math.sqrt(vx * vx + vy * vy);
       const angle = Math.atan2(vy, vx) * (180 / Math.PI);
 
-      // Estica na direção do movimento
       const stretch = Math.min(speed * 0.012, 0.45);
       const sx = 1 + stretch;
       const sy = 1 - stretch * 0.5;
@@ -47,7 +46,6 @@ export default function BlobCursor() {
 
     if (!blobRef.current) return;
 
-    // Detecta hover em interativos
     const onEnter = () => setHovered(true);
     const onLeave = () => setHovered(false);
 
