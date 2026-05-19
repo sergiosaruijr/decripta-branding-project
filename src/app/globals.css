@@ -129,6 +129,8 @@
   }
   html {
     scroll-behavior: smooth;
+    scrollbar-color: #c8f135 #111111;
+    scrollbar-width: auto;
   }
   section {
     scroll-margin-top: 80px;
