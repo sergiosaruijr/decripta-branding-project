@@ -119,7 +119,9 @@ export function FormDecripta() {
               <SiX size={20} /> TWITTER (X)
             </a> */}
             <a
-              href="mailto:decriptabranding@gmail.com"
+              href="https://wa.me/5543988507817"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-#00322A text-sm font-manrope hover:opacity-90 hover:text-[#6fb14a] transition-opacity  w-fit flex gap-5 mb-8"
             >
               <Phone size={20} />

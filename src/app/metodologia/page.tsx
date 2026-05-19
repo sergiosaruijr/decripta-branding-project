@@ -5,24 +5,26 @@ import Image from "next/image";
 export default function DecriptaPageApproach() {
   return (
     <div className="bg-[#00322A] text-[#f5f5f0] min-h-screen font-sans">
-      <section className="px-30 pt-36 pb-20">
-        <h1 className="text-5xl font-bold leading-tight max-w-3xl">
+      <section className="sm:px-20 px-10 pt-36 pb-20">
+        <h1 className="text-[6vw] sm:text-[5vw] 2xl:text-[4.5vw] font-bold leading-tight">
           Um processo claro para <br />
-          <span className="text-[#a8e038]">construir marcas consistentes.</span>
+          <span className="text-[#a8e038] text-[7vw] sm:text-[6vw] 2xl:text-[5vw]">
+            construir marcas consistentes.
+          </span>
         </h1>
-        <p className="mt-6 text-[#a0b89a] text-xl leading-relaxed max-w-3xl">
-          Nossa metodologia foi criada para trazer estrutura ao <br />
-          que normalmente é feito no improviso.
+        <p className="mt-6 text-[#a0b89a] text-[4.5vw] sm:text-[2.5vw] md:text-[3vw] 2xl:text-[2.5vw] leading-relaxed ">
+          Nossa metodologia foi criada para trazer estrutura ao que normalmente{" "}
+          <br />é feito no improviso.
         </p>
       </section>
 
-      <section className="px-30 pb-30 pt-15">
+      <section className="sm:px-20 pb-30 px-10 ">
         <div className="flex flex-col md:flex-row gap-px">
           <div className="flex-1  p-10 flex flex-col border-[#A0D81D] border-t-2 border-r-2">
-            <h3 className="text-[#a8e038] text-xl font-semibold mb-4">
+            <h3 className="text-[#a8e038] text-[5vw] sm:text-[2.5vw] 2xl:text-[3vw] font-semibold mb-4">
               Decodificação
             </h3>
-            <p className="text-[#a0b89a] text-sm leading-relaxed">
+            <p className="text-[#a0b89a] sm:text-[2.5vw] md:text-[2vw] 2xl:text-[1.5vw] text-[2.5vw]leading-relaxed">
               Um mergulho profundo no DNA do negócio. Analisamos mercado,
               comportamento e discurso para encontrar o núcleo do valor da sua
               marca.
@@ -30,10 +32,10 @@ export default function DecriptaPageApproach() {
           </div>
 
           <div className="flex-1  p-10 flex flex-col border-[#A0D81D] border-t-2 border-r-2">
-            <h3 className="text-[#a8e038] text-xl font-semibold mb-4">
+            <h3 className="text-[#a8e038] text-[5vw] sm:text-[2.5vw] 2xl:text-[3vw] font-semibold mb-4">
               Direção
             </h3>
-            <p className="text-[#a0b89a] text-sm leading-relaxed">
+            <p className="text-[#a0b89a] sm:text-[2.5vw] md:text-[2vw] 2xl:text-[1.5vw] text-[2.5vw] leading-relaxed">
               Transformamos dados e descobertas em estrutura real. Definimos o
               posicionamento, a voz e a ambição competitiva onde sua marca vai
               dominar.
@@ -41,10 +43,10 @@ export default function DecriptaPageApproach() {
           </div>
 
           <div className="flex-1 p-10 flex flex-col border-[#A0D81D] border-t-2">
-            <h3 className="text-[#a8e038] text-xl font-semibold mb-4">
+            <h3 className="text-[#a8e038] text-[5vw] sm:text-[2.5vw] 2xl:text-[3vw] font-semibold mb-4">
               Materialização
             </h3>
-            <p className="text-[#a0b89a] text-sm leading-relaxed">
+            <p className="text-[#a0b89a] sm:text-[2.5vw] md:text-[2vw] 2xl:text-[1.5vw] text-[2.5vw] leading-relaxed">
               A estratégia ganha forma. Criamos a identidade visual e os pontos
               de contato que traduzem a nova inteligência da marca em impacto
               tangível.
@@ -53,26 +55,25 @@ export default function DecriptaPageApproach() {
         </div>
       </section>
 
-      <div className="w-full h-20 bg-[#a8e038] overflow-hidden flex items-center">
-        <p className="text-[#0d2818] text-5xl font-black tracking-tight whitespace-nowrap opacity-20 select-none">
-          DECRIPTA · DECRIPTA · DECRIPTA · DECRIPTA · DECRIPTA · DECRIPTA ·
-          DECRIPTA · DECRIPTA · DECRIPTA · DECRIPTA ·{/* deixar nao clicavel */}
-        </p>
-      </div>
+      {/* <div className="w-full h-20 bg-[#a8e038] overflow-hidden flex items-center"></div> */}
 
-      <section className="bg-[#a8e038] px-8 py-20 text-center">
-        <h2 className="text-4xl font-space text-[#0d2818] mb-8">
+      <section className="bg-[#a8e038] px-8 py-32 text-center">
+        <h2 className="md:text-[3.5vw] lg:text-[3vw] text-[5vw] font-space leading-tight text-[#0d2818] mb-8">
           Pronto para decifrar o <br />
-          verdadeiro potencial da sua <br />
-          marca?
+          <strong>
+            verdadeiro potencial da sua <br />
+          </strong>
+          <strong>da sua marca?</strong>
         </h2>
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 bg-[#0d2818] text-[#a8e038] text-sm font-semibold px-8 py-3"
-        >
-          SOLICITAR DIAGNÓSTICO
-          <ArrowRight size={16} />
-        </a>
+        <div className=" text-[#A0D81D] hover:text-[#f5f5f0]">
+          <a
+            href="#"
+            className="inline-flex items-center bg-[#0d2818] text-sm font-semibold px-8 py-3 font-inter rounded-4xl"
+          >
+            <p className="pr-2">SOLICITAR DIAGNÓSTICO</p>
+            <ArrowRight className="" />
+          </a>
+        </div>
       </section>
 
       <FooterDecripta />
